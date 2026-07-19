@@ -1,1 +1,54 @@
-<p>home works!</p>
+<section class="hero-section" [style.backgroundImage]="'linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.45)), url(' + heroImage + ')'">
+    <div class="hero-content">
+      <div class="hero-logo-badge">🏄‍♀️</div>
+      <h1 class="hero-title">JOFAN SURF SCHOOL</h1>
+      <p class="hero-subtitle">Desliza sobre tus miedos, vive sobre las olas</p>
+      <div class="hero-actions">
+        <button class="btn btn-primary btn-lg" (click)="navigateToRental()">
+          Ver Alquiler de Tablas
+        </button>
+      </div>
+    </div>
+  </section>
+  
+  <div class="app-container" style="margin-top: 40px; margin-bottom: 60px;">
+    <div style="text-align: center; margin-bottom: 40px;">
+      <h2 style="font-size: 2rem; color: #0e6f7c; font-weight: 800; margin-bottom: 10px;">
+        Nuestros Servicios
+      </h2>
+      <p style="color: #64748b; font-size: 1.1rem; max-width: 600px; margin: 0 auto;">
+        Aprende con campeones y equipate con el mejor material de la costa directamente en nuestra escuela.
+      </p>
+    </div>
+  
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+      
+      <div class="board-card" style="padding: 24px; text-align: center;">
+        <div style="font-size: 3rem; margin-bottom: 15px;">🌊</div>
+        <h3 style="font-size: 1.4rem; color: #1e293b; margin-bottom: 10px; font-weight: 700;">Clases de Surf</h3>
+        <p style="color: #64748b; line-height: 1.6; margin-bottom: 20px;">
+          Iniciación, perfeccionamiento y guiado local. Clases individuales y grupales adaptadas al 100% a tu nivel.
+        </p>
+        <span class="badge badge-success" style="padding: 6px 12px; font-size: 12px;">Todos los niveles</span>
+      </div>
+  
+      <div class="board-card" style="padding: 24px; text-align: center; border-top: 4px solid #0e6f7c;">
+        <div style="font-size: 3rem; margin-bottom: 15px;">🏄‍♂️</div>
+        <h3 style="font-size: 1.4rem; color: #1e293b; margin-bottom: 10px; font-weight: 700;">Alquiler de Tablas</h3>
+        <p style="color: #64748b; line-height: 1.6; margin-bottom: 20px;">
+          Contamos con el stock de tablas de surf más amplio. Softboards, evolutivas y fibras listas para entrar al agua.
+        </p>
+        <button class="btn btn-primary" (click)="navigateToRental()">Gestionar Stock</button>
+      </div>
+  
+      <div class="board-card" style="padding: 24px; text-align: center;">
+        <div style="font-size: 3rem; margin-bottom: 15px;">🛡️</div>
+        <h3 style="font-size: 1.4rem; color: #1e293b; margin-bottom: 10px; font-weight: 700;">Equipamiento Premium</h3>
+        <p style="color: #64748b; line-height: 1.6; margin-bottom: 20px;">
+          Neoprenos de primeras marcas lavados y desinfectados a diario. Licras y seguros de accidentes incluidos.
+        </p>
+        <span class="badge badge-success" style="padding: 6px 12px; font-size: 12px;">Seguridad 100%</span>
+      </div>
+  
+    </div>
+  </div>
