@@ -13,19 +13,20 @@ private apiUrl = 'http://localhost:8080/api/surfboards';
 
   constructor() { }
 
-  surfboards = signal<Surfboard[]>([]);
+  private _surfboards = signal<Surfboard[]>([]);
+  public surfboards = this._surfboards.asReadonly();
 
   loadSurfboards(): void {
     this.http.get<Surfboard[]>(this.apiUrl).subscribe({
-      next: (data) => this.surfboards.set(data),
-      error: (err) => console.error('Error cargando tablas de surf:', err)
+      next: (data) => this._surfboards.set(data),
+      error: (err) => console.error('Error loading surfboards:', err)
     });
   }
 
   createSurfboard(surfboard: Surfboard): Observable<Surfboard> {
     return this.http.post<Surfboard>(this.apiUrl, surfboard).pipe(
       tap((newBoard) => {
-        this.surfboards.update((current) => [...current, newBoard]);
+        this._surfboards.update((current) => [...current, newBoard]);
       })
     );
   }
@@ -33,7 +34,7 @@ private apiUrl = 'http://localhost:8080/api/surfboards';
   deleteSurfboard(id: number): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/${id}`).pipe(
       tap(() => {
-        this.surfboards.update((current) => current.filter(b => b.id !== id));
+        this._surfboards.update((current) => current.filter(b => b.id !== id));
       })
     );
   }

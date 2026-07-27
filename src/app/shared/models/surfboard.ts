@@ -2,7 +2,8 @@ export interface Surfboard {
     id?: number;
     model: string;
     type: string;
-    size: number;
+    size: string;
     rentalPricePerHour: number;
     isAvailable: boolean;
+    imageSrc?: string;
 }
