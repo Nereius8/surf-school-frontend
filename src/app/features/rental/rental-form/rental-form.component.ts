@@ -1,49 +1,45 @@
-import { Component, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { SurfboardService } from '../../../services/surfboard.service'; 
+import { Component, inject, signal } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { SurfboardService } from '../../../core/services/surfboard.service';
+import { Surfboard } from '../../../shared/models/surfboard';
+
 
 @Component({
   selector: 'app-rental-form',
-  imports: [CommonModule, ReactiveFormsModule],
+  standalone: true,
+  imports: [ FormsModule],
   templateUrl: './rental-form.component.html',
   styleUrl: './rental-form.component.css'
 })
 export class RentalFormComponent {
-  private fb = inject(FormBuilder);
-  private surfboardService = inject(SurfboardService);
+  public boardService = inject(SurfboardService);
+  
+  public showForm = signal<boolean>(false);
+  public newBoard: Surfboard = this.resetForm();
 
-  surfboardForm: FormGroup = this.fb.group({
-    model: ['', [Validators.required, Validators.minLength(3)]],
-    type: ['Softboard', [Validators.required]],
-    size: [8.0, [Validators.required, Validators.min(4)]],
-    rentalPricePerHour: [15, [Validators.required, Validators.min(1)]],
-    isAvailable: [true]
-  });
+  toggleForm(): void {
+    this.showForm.update(val => !val);
+  }
 
   onSubmit(): void {
-    if (this.surfboardForm.invalid) {
-      this.surfboardForm.markAllAsTouched(); // Muestra los errores visuales si intentan enviar vacío
-      return;
+    if (this.newBoard.model && this.newBoard.size) {
+      this.boardService.createSurfboard(this.newBoard).subscribe({
+        next: () => {
+          this.newBoard = this.resetForm();
+          this.showForm.set(false);
+        },
+        error: (err) => console.error('Error saving surfboard:', err)
+      });
     }
+  }
 
-    // Extraemos los datos del formulario
-    const newBoard = this.surfboardForm.value;
-
-    // Enviamos al backend de Spring Boot
-    this.surfboardService.createSurfboard(newBoard).subscribe({
-      next: (savedBoard) => {
-        console.log('Board successfully saved!', savedBoard);
-        this.surfboardForm.reset({
-          type: 'Softboard',
-          size: 8.0,
-          rentalPricePerHour: 15,
-          isAvailable: true
-        }); // Reseteamos el formulario con valores por defecto cómodos
-      },
-      error: (err) => {
-        console.error('Error saving surfboard:', err);
-      }
-    });
+  private resetForm(): Surfboard {
+    return {
+      model: '',
+      type: 'Softboard Blue/Orange',
+      size: '6\'0"',
+      rentalPricePerHour: 12.0,
+      isAvailable: true
+    };
   }
 }

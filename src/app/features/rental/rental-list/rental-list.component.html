@@ -1,1 +1,49 @@
-<p>rental-list works!</p>
+<div class="landing-container">
+  <!-- Encabezado estilo Jofan Surf School -->
+  <header class="offers-header">
+    <span class="offers-tag">WHAT WE OFFER</span>
+    <h2 class="offers-title">Surf lessons and board rental</h2>
+    <div class="wave-divider"></div>
+  </header>
+
+  <!-- Rejilla de tarjetas -->
+  <div class="offers-grid">
+    @for (board of boardService.surfboards(); track board.id) {
+      <article class="offer-card">
+        <div class="card-image-wrapper">
+          <img [src]="board.imageSrc || defaultBoardImage" [alt]="board.model" class="card-img">
+          
+          <!-- Icono circular flotante según el tipo de tabla -->
+          <div class="card-icon-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M480-80q-137 0-240.5-70T120-332q0-104 77.5-177.5T382-583q6 0 11.5.5t11.5 1.5q-11-47-5-92.5t27-84.5q37-64 97.5-99.5T660-892q61 0 102 31.5t48 83.5q11 75-14.5 145.5T716-508q42 16 68 51.5t26 80.5q0 104-103.5 174T480-80Zm0-80q106 0 183-50.5T738-344q0-22-12-39.5T694-412q-32-13-58.5-32.5T587-493q33-47 43-100.5t-10-106.5q-5-30-22.5-47T552-770q-26 21-43 51.5T482-651q3 31 1.5 61.5T475-528q-36-2-69.5 8.5T348-486q-34 40-41 91.5t19 97.5q29 16 62.5 24t67.5 9Zm0-240Z"/></svg>
+          </div>
+        </div>
+
+        <div class="card-content">
+          <h3 class="card-title">{{ board.model }}</h3>
+          <p class="card-description">Premium {{ board.type }} perfect for sizing up your waves. Configured at size {{ board.size }}.</p>
+          
+          <!-- Lista de beneficios con checkmark del diseño -->
+          <ul class="features-list">
+            <li><span class="check-icon">✓</span> Available for instant rental</li>
+            <li><span class="check-icon">✓</span> Well maintained equipment</li>
+            <li><span class="check-icon">✓</span> Perfect for your current level</li>
+          </ul>
+
+          <div class="card-action-row">
+            <div class="price-tag">
+              <span class="price-value">${{ board.rentalPricePerHour }}</span>/hr
+            </div>
+            
+            <!-- Botón de borrar estilizado discretamente si eres admin -->
+            @if (board.id) {
+              <button (click)="onDelete(board.id)" class="link-delete">
+                Remove board →
+              </button>
+            }
+          </div>
+        </div>
+      </article>
+    }
+  </div>
+</div>

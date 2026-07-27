@@ -1,26 +1,27 @@
-import { CommonModule } from '@angular/common';
-import { Component, OnInit, inject} from '@angular/core';
-import { SurfboardService } from '../../../services/surfboard.service';
+import { Component, inject } from '@angular/core';
+import { SurfboardService } from '../../../core/services/surfboard.service';
+import { RentalFormComponent } from '../rental-form/rental-form.component';
 
 @Component({
   selector: 'app-rental-list',
-  imports: [CommonModule],
+  standalone: true,
+  imports: [ RentalFormComponent],
   templateUrl: './rental-list.component.html',
   styleUrl: './rental-list.component.css'
 })
-export class RentalListComponent implements OnInit {
-  boardService = inject(SurfboardService);
+export class RentalListComponent {
+  public boardService = inject(SurfboardService);
+  public defaultBoardImage = 'tablas.jpg';
 
-  ngOnInit(): void {
+  constructor() {
     this.boardService.loadSurfboards();
   }
 
   onDelete(id: number): void {
-    if (confirm('¿Seguro que deseas dar de baja esta tabla del inventario?')) {
+    if (confirm('Are you sure you want to remove this surfboard from the inventory?')) {
       this.boardService.deleteSurfboard(id).subscribe({
-        error: (err) => console.error('Error al eliminar tabla:', err)
+        error: (err) => console.error('Error deleting surfboard:', err)
       });
     }
   }
-
 }
