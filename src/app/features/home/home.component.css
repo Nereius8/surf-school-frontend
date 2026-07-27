@@ -1,57 +1,336 @@
+/* --- ESTILOS GENERALES DEL HOME --- */
+:host {
+  display: block;
+  font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+  color: #334155;
+  background-color: #ffffff;
+}
+
+/* --- HERO SECTION (Estilo Referencia con Foto a la Derecha) --- */
 .hero-section {
-    height: 70vh;
-    min-height: 450px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    width: 100%;
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  background-image: url('/public/tablas.jpg'); /* Pon aquí el nombre exacto de la foto que achicaste */
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+/* Capa sutil para que el texto resalte si la foto brilla mucho */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255,255,255,0.9) 30%, rgba(255,255,255,0.2) 100%);
+  z-index: 1;
+}
+
+.hero-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  z-index: 2;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero-tag {
+  font-size: 11px;
+  font-weight: 800;
+  color: #007a87;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.hero-title {
+  font-size: 3.8rem;
+  font-weight: 900;
+  color: #0b2240;
+  line-height: 1.1; /* Arregla el encabezado demasiado junto */
+  margin: 15px 0;
+  letter-spacing: -1px;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 35px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  padding: 14px 28px;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all 0.2s ease;
+}
+
+.btn-filled {
+  background-color: #007a87;
+  color: white;
+  border: none;
+}
+
+.btn-filled:hover {
+  background-color: #005f69;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #334155;
+  border: 2px solid #cbd5e1;
+}
+
+.btn-outline:hover {
+  background-color: #f8fafc;
+}
+
+/* --- SERVICES SECTION (Las 3 tarjetas alineadas) --- */
+.services-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 40px;
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.services-tag {
+  font-size: 11px;
+  font-weight: 800;
+  color: #007a87;
+  letter-spacing: 2px;
+}
+
+.services-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0b2240;
+  margin: 10px 0;
+}
+
+.wave-divider {
+  color: #007a87;
+  letter-spacing: -2px;
+  font-weight: bold;
+}
+
+/* Rejilla de 3 columnas responsiva */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-image-wrapper {
+  position: relative;
+  height: 220px;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-icon-badge {
+  position: absolute;
+  bottom: -20px;
+  left: 25px;
+  background: #007a87;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0,122,135,0.3);
+}
+
+.card-body {
+  padding: 35px 25px 25px 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #0b2240;
+  margin-bottom: 12px;
+}
+
+.card-description {
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.card-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px 0;
+}
+
+.card-features li {
+  font-size: 0.85rem;
+  color: #334155;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.check {
+  color: #007a87;
+  font-weight: 700;
+}
+
+.btn-card {
+  background: transparent;
+  border: none;
+  color: #007a87;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-align: left;
+  padding: 0;
+  cursor: pointer;
+  margin-top: auto;
+  transition: color 0.2s;
+}
+
+.btn-card:hover {
+  color: #0b2240;
+}
+
+/* --- PRICING SECTION --- */
+.pricing-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px 80px 40px;
+}
+
+.pricing-container {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.pricing-cat-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #0b2240;
+  margin-bottom: 24px;
+}
+
+.price-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.price-card.featured-price {
+  border-left: 4px solid #007a87;
+  background: #f0fdfa;
+}
+
+.price-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.price-header h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0b2240;
+  margin: 0;
+}
+
+.price-tag {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #007a87;
+}
+
+.price-tag small {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.price-desc {
+  font-size: 0.88rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.rental-card {
+  background: #ffffff;
+  border: 2px dashed #cbd5e1;
+}
+
+.rental-specs {
+  list-style: none;
+  padding: 15px 0 0 0;
+  margin: 15px 0 0 0;
+  border-top: 1px dashed #e2e8f0;
+}
+
+.rental-specs li {
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+}
+
+.pricing-notice {
+  background: #f8fafc;
+  padding: 15px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  border: 1px solid #e2e8f0;
+}
+
+@media (max-width: 968px) {
+  .pricing-container {
+    grid-template-columns: 1fr;
   }
-  
-  .hero-content {
-    padding: 20px;
-    max-width: 800px;
-    animation: fadeInUp 0.8s ease-out;
-  }
-  
-  .hero-logo-badge {
-    font-size: 4rem;
-    margin-bottom: 10px;
-  }
-  
   .hero-title {
-    font-size: 3.5rem;
-    font-weight: 900;
-    letter-spacing: 2px;
-    margin-bottom: 15px;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    font-size: 2.8rem;
   }
-  
-  .hero-subtitle {
-    font-size: 1.5rem;
-    font-weight: 500;
-    margin-bottom: 30px;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
-  }
-  
-  .hero-actions .btn-lg {
-    padding: 14px 32px;
-    font-size: 1.1rem;
-    font-weight: 700;
-    box-shadow: 0 4px 15px rgba(14, 111, 124, 0.4);
-  }
-  
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+}

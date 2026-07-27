@@ -1,54 +1,146 @@
-<section class="hero-section" [style.backgroundImage]="'linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.45)), url(' + heroImage + ')'">
+<!-- SECCIÓN HERO (BANNER PRINCIPAL) -->
+<section class="hero-section">
+  <div class="hero-overlay"></div>
+  <div class="hero-container">
     <div class="hero-content">
-      <div class="hero-logo-badge">🏄‍♀️</div>
-      <h1 class="hero-title">JOFAN SURF SCHOOL</h1>
-      <p class="hero-subtitle">Desliza sobre tus miedos, vive sobre las olas</p>
-      <div class="hero-actions">
-        <button class="btn btn-primary btn-lg" (click)="navigateToRental()">
-          Ver Alquiler de Tablas
+      <span class="hero-tag">JOVAN SURF SCHOOL</span>
+      <h1 class="hero-title">LEARN. SURF.<br>LIVE THE OCEAN.</h1>
+      <p class="hero-subtitle">
+        Surf lessons for all levels in a safe, fun and professional environment.
+      </p>
+      <div class="hero-buttons">
+        <button class="btn btn-filled">BOOK YOUR LESSON</button>
+        <button class="btn btn-outline" (click)="navigateToRental()">
+          <span class="play-icon">▶</span> WATCH VIDEO
         </button>
       </div>
     </div>
-  </section>
-  
-  <div class="app-container" style="margin-top: 40px; margin-bottom: 60px;">
-    <div style="text-align: center; margin-bottom: 40px;">
-      <h2 style="font-size: 2rem; color: #0e6f7c; font-weight: 800; margin-bottom: 10px;">
-        Nuestros Servicios
-      </h2>
-      <p style="color: #64748b; font-size: 1.1rem; max-width: 600px; margin: 0 auto;">
-        Aprende con campeones y equipate con el mejor material de la costa directamente en nuestra escuela.
-      </p>
-    </div>
-  
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+  </div>
+</section>
+
+<!-- SECCIÓN NUESTROS SERVICIOS PREMIUM -->
+<section class="services-section">
+  <header class="services-header">
+    <span class="services-tag">WHAT WE OFFER</span>
+    <h2 class="services-title">Surf lessons and board rental</h2>
+    <div class="wave-divider">〰〰〰</div>
+  </header>
+
+  <div class="services-grid">
+    <!-- Tarjeta 1: Surf Lessons -->
+    <article class="service-card">
+      <div class="card-image-wrapper">
+        <img src="surf-lesson.jpg" alt="Surf Lessons" class="card-img">
+        <div class="card-icon-badge">🏄‍♂️</div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Beginner Lessons</h3>
+        <p class="card-description">Learn to surf from scratch in a safe and fun environment. We'll be with you every step of the way.</p>
+        <ul class="card-features">
+          <li><span class="check">✓</span> Certified instructors</li>
+          <li><span class="check">✓</span> Equipment included</li>
+          <li><span class="check">✓</span> Small group classes</li>
+        </ul>
+        <button class="btn-card">LEARN MORE →</button>
+      </div>
+    </article>
+
+    <!-- Tarjeta 2: Board Rental -->
+    <article class="service-card">
+      <div class="card-image-wrapper">
+        <img src="tablas.jpg" alt="Board Rental" class="card-img">
+        <div class="card-icon-badge">🏄</div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Intermediate Lessons</h3>
+        <p class="card-description">Improve your skills, gain confidence and take your surfing to the next level with our coaches.</p>
+        <ul class="card-features">
+          <li><span class="check">✓</span> Technique analysis</li>
+          <li><span class="check">✓</span> Personalized feedback</li>
+          <li><span class="check">✓</span> Sessions adapted to your level</li>
+        </ul>
+        <button class="btn-card" (click)="navigateToRental()">LEARN MORE →</button>
+      </div>
+    </article>
+
+    <!-- Tarjeta 3: Car Transport -->
+    <article class="service-card">
+      <div class="card-image-wrapper">
+        <img src="surf-van.jpg" alt="Car Transport" class="card-img">
+        <div class="card-icon-badge">🚐</div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Car Transport</h3>
+        <p class="card-description">Seamless transfer service to the best local surf breaks. We handle the driving and the material storage.</p>
+        <ul class="card-features">
+          <li><span class="check">✓</span> Hotel pickup & drop-off</li>
+          <li><span class="check">✓</span> Safe board transport</li>
+          <li><span class="check">✓</span> Local surf spot guiding</li>
+        </ul>
+        <button class="btn-card">LEARN MORE →</button>
+      </div>
+    </article>   
+  </div>
+</section>
+
+<!-- SECCIÓN DE PRECIOS Y TARIFAS (AHORA AFUERA, BIEN UBICADA) -->
+<section class="pricing-section">
+  <header class="services-header">
+    <span class="services-tag">OUR RATES</span>
+    <h2 class="services-title">Lessons & Rental Pricing</h2>
+    <div class="wave-divider">〰〰〰</div>
+  </header>
+
+  <div class="pricing-container">
+    <!-- COLUMNA CLASES -->
+    <div class="pricing-column">
+      <h3 class="pricing-cat-title">🏄‍♂️ Surf Lessons</h3>
       
-      <div class="board-card" style="padding: 24px; text-align: center;">
-        <div style="font-size: 3rem; margin-bottom: 15px;">🌊</div>
-        <h3 style="font-size: 1.4rem; color: #1e293b; margin-bottom: 10px; font-weight: 700;">Clases de Surf</h3>
-        <p style="color: #64748b; line-height: 1.6; margin-bottom: 20px;">
-          Iniciación, perfeccionamiento y guiado local. Clases individuales y grupales adaptadas al 100% a tu nivel.
-        </p>
-        <span class="badge badge-success" style="padding: 6px 12px; font-size: 12px;">Todos los niveles</span>
+      <div class="price-card">
+        <div class="price-header">
+          <h4>Private Lesson (Beginner)</h4>
+          <span class="price-tag">350K <small>/ person</small></span>
+        </div>
+        <p class="price-desc">2 hours at the beach break. Includes dedicated certified instructor and all necessary gear.</p>
       </div>
-  
-      <div class="board-card" style="padding: 24px; text-align: center; border-top: 4px solid #0e6f7c;">
-        <div style="font-size: 3rem; margin-bottom: 15px;">🏄‍♂️</div>
-        <h3 style="font-size: 1.4rem; color: #1e293b; margin-bottom: 10px; font-weight: 700;">Alquiler de Tablas</h3>
-        <p style="color: #64748b; line-height: 1.6; margin-bottom: 20px;">
-          Contamos con el stock de tablas de surf más amplio. Softboards, evolutivas y fibras listas para entrar al agua.
-        </p>
-        <button class="btn btn-primary" (click)="navigateToRental()">Gestionar Stock</button>
+
+      <div class="price-card featured-price">
+        <div class="price-header">
+          <h4>Private Lesson (Intermediate)</h4>
+          <span class="price-tag">550K <small>/ person</small></span>
+        </div>
+        <p class="price-desc">Catch green waves outside with a pro instructor guiding you through the lineup and positioning.</p>
       </div>
-  
-      <div class="board-card" style="padding: 24px; text-align: center;">
-        <div style="font-size: 3rem; margin-bottom: 15px;">🛡️</div>
-        <h3 style="font-size: 1.4rem; color: #1e293b; margin-bottom: 10px; font-weight: 700;">Equipamiento Premium</h3>
-        <p style="color: #64748b; line-height: 1.6; margin-bottom: 20px;">
-          Neoprenos de primeras marcas lavados y desinfectados a diario. Licras y seguros de accidentes incluidos.
-        </p>
-        <span class="badge badge-success" style="padding: 6px 12px; font-size: 12px;">Seguridad 100%</span>
+
+      <div class="price-card">
+        <div class="price-header">
+          <h4>Group Lesson (Beginners)</h4>
+          <span class="price-tag">250K <small>/ person</small></span>
+        </div>
+        <p class="price-desc">Max 5 people per group. 2 hours of pure fun with 3 instructors ensuring maximum safety and focus.</p>
       </div>
-  
+    </div>
+
+    <!-- COLUMNA ALQUILER -->
+    <div class="pricing-column">
+      <h3 class="pricing-cat-title">🏄 Board Rental</h3>
+      
+      <div class="price-card rental-card">
+        <div class="price-header">
+          <h4>Full Day Rental</h4>
+          <span class="price-tag">100K <small>/ day</small></span>
+        </div>
+        <p class="price-desc">Grab any board from our premium fleet (Softboards, Funboards, or Longboards) and surf at your own pace all day long.</p>
+        <ul class="rental-specs">
+          <li>✓ Switch boards anytime if available</li>
+          <li>✓ Wax included</li>
+          <li>✓ Leash & lycra included</li>
+        </ul>
+      </div>
+      
+      <div class="pricing-notice">
+        <p>💡 <strong>Planning a long trip?</strong> Ask our staff at the school for special weekly discounts on equipment rentals!</p>
+      </div>
     </div>
   </div>
+</section>
