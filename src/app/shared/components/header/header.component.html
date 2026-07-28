@@ -1,0 +1,65 @@
+<nav class="sticky top-0 z-50 bg-white border-b border-slate-100 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        
+        <!-- LOGO (Mantiene tu idea original) -->
+        <div routerLink="/home" class="flex items-center space-x-3 cursor-pointer group">
+          <div class="text-3xl transition-transform group-hover:scale-110 duration-200">🌊</div>
+          <div class="flex flex-col">
+            <span class="text-xl font-black tracking-wider text-slate-950 leading-none">JOVAN</span>
+            <span class="text-xs font-medium text-cyan-600 tracking-wide">Surf School</span>
+          </div>
+        </div>
+        
+        <!-- MENÚ ESCRITORIO (Oculto en móviles, visible desde 'md') -->
+        <ul class="hidden md:flex items-center space-x-1 lg:space-x-4 text-sm font-medium text-slate-600">
+          <li><a routerLink="/home" routerLinkActive="text-cyan-600 border-b-2 border-cyan-600" [routerLinkActiveOptions]="{exact: true}" class="px-3 py-2 hover:text-cyan-600 transition-colors duration-150">Home</a></li>
+          <li><a routerLink="/lessons" routerLinkActive="text-cyan-600 border-b-2 border-cyan-600" class="px-3 py-2 hover:text-cyan-600 transition-colors duration-150">Surf Lessons</a></li>
+          <li><a routerLink="/rental" routerLinkActive="text-cyan-600 border-b-2 border-cyan-600" class="px-3 py-2 hover:text-cyan-600 transition-colors duration-150">Board Rental</a></li>
+          <li><a routerLink="/transport" routerLinkActive="text-cyan-600 border-b-2 border-cyan-600" class="px-3 py-2 hover:text-cyan-600 transition-colors duration-150">Transport</a></li>
+          <li><a routerLink="/location" routerLinkActive="text-cyan-600 border-b-2 border-cyan-600" class="px-3 py-2 hover:text-cyan-600 transition-colors duration-150">Location</a></li>
+        </ul>
+        
+        <!-- BOTÓN RESERVAS ESCRITORIO (Oculto en móvil) -->
+        <div class="hidden md:block">
+          <button class="bg-cyan-600 hover:bg-cyan-700 text-white font-bold tracking-wider px-6 py-2.5 rounded-full text-xs transition-all shadow-md hover:shadow-cyan-100 active:scale-95">
+            BOOK NOW
+          </button>
+        </div>
+  
+        <!-- BOTÓN MENÚ HAMBURGUESA (Solo visible en móviles) -->
+        <div class="flex md:hidden">
+          <button (click)="toggleMenu()" type="button" class="text-slate-600 hover:text-slate-900 focus:outline-none p-2">
+            @if (!isMenuOpen) {
+                <!-- Icono cuando el menú está cerrado -->
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+              } @else {
+                <!-- Icono 'X' cuando el menú está abierto -->
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+              }
+            </button>
+  
+      </div>
+    </div>
+  
+    <!-- MENÚ MÓVIL DESPLEGABLE (Solo se muestra si isMenuOpen es true) -->
+    @if (isMenuOpen) {
+        <div class="md:hidden bg-white border-t border-slate-100">
+          <ul class="px-2 pt-2 pb-4 space-y-1 text-base font-medium text-slate-700">
+            <li><a routerLink="/home" (click)="isMenuOpen = false" routerLinkActive="bg-cyan-50 text-cyan-600" class="block px-4 py-3 rounded-lg">Home</a></li>
+            <li><a routerLink="/lessons" (click)="isMenuOpen = false" routerLinkActive="bg-cyan-50 text-cyan-600" class="block px-4 py-3 rounded-lg">Surf Lessons</a></li>
+            <li><a routerLink="/rental" (click)="isMenuOpen = false" routerLinkActive="bg-cyan-50 text-cyan-600" class="block px-4 py-3 rounded-lg">Board Rental</a></li>
+            <li><a routerLink="/transport" (click)="isMenuOpen = false" routerLinkActive="bg-cyan-50 text-cyan-600" class="block px-4 py-3 rounded-lg">Transport</a></li>
+            <li><a routerLink="/location" (click)="isMenuOpen = false" routerLinkActive="bg-cyan-50 text-cyan-600" class="block px-4 py-3 rounded-lg">Location</a></li>
+            <li class="pt-4 px-4">
+              <button class="w-full bg-cyan-600 hover:bg-cyan-700 text-white font-bold tracking-wider py-3 rounded-xl text-sm shadow-md">
+                BOOK NOW
+              </button>
+            </li>
+          </ul>
+        </div>
+      }
