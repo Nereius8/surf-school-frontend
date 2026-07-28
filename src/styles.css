@@ -1,14 +1,16 @@
+
+@import "tailwindcss";
 /* Paleta de colores de Jofan Surf School */
 :root {
-    --jofan-teal: #0e6f7c;
-    --jofan-teal-hover: #0a525c;
-    --jofan-orange: #f59e0b; /* Naranja de las tablas reales */
-    --jofan-navy: #0b1329;
-    --jofan-bg: #f8fafc;
-    --jofan-card-bg: #ffffff;
-    --jofan-text-main: #1e293b;
-    --jofan-text-muted: #64748b;
-    --jofan-border: #e2e8f0;
+    --jovan-teal: #0e6f7c;
+    --jovan-teal-hover: #0a525c;
+    --jovan-orange: #f59e0b; /* Naranja de las tablas reales */
+    --jovan-navy: #0b1329;
+    --jovan-bg: #f8fafc;
+    --jovan-card-bg: #ffffff;
+    --jovan-text-main: #1e293b;
+    --jovan-text-muted: #64748b;
+    --jovan-border: #e2e8f0;
   }
   
   /* Estilos globales */
@@ -28,7 +30,7 @@
   }
   
   /* Logotipo y Barra Superior */
-  .jofan-navbar {
+  .jovan-navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -44,7 +46,7 @@
     gap: 12px;
   }
   
-  .jofan-logo-icon {
+  .jovan-logo-icon {
     background-color: var(--jofan-teal);
     color: white;
     width: 45px;
@@ -56,14 +58,14 @@
     font-size: 24px;
   }
   
-  .jofan-logo-text {
+  .jovan-logo-text {
     font-size: 22px;
     font-weight: 800;
     color: var(--jofan-teal);
     letter-spacing: 1px;
   }
   
-  .jofan-logo-sub {
+  .jovan-logo-sub {
     font-size: 10px;
     text-transform: uppercase;
     color: var(--jofan-text-muted);
