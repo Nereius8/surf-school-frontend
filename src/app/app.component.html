@@ -1,22 +1,5 @@
-<nav class="jofan-navbar">
-    <div class="jofan-logo" routerLink="/home" style="cursor: pointer;">
-      <div style="font-size: 30px;">🌊</div>
-      <div>
-        <span class="jofan-logo-text">JOVAN</span>
-        <span class="jofan-logo-sub">Surf School</span>
-      </div>
-    </div>
-    
-    <ul class="nav-links">
-      <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
-      <li><a routerLink="/lessons" routerLinkActive="active">Surf Lessons</a></li>
-      <li><a routerLink="/rental" routerLinkActive="active">Board Rental</a></li>
-      <li><a routerLink="/transport" routerLinkActive="active">Transport</a></li>
-      <li><a routerLink="/location" routerLinkActive="active">Location</a></li>
-    </ul>
-    
-    <button class="btn-primary" style="padding: 10px 24px; font-size: 13px;">BOOK NOW</button>  </nav>
+<app-header></app-header>
 
-<main>
-<router-outlet></router-outlet>
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+  <router-outlet></router-outlet>
 </main>
