@@ -1,146 +1,209 @@
-<!-- SECCIÓN HERO (BANNER PRINCIPAL) -->
-<section class="hero-section">
-  <div class="hero-overlay"></div>
-  <div class="hero-container">
-    <div class="hero-content">
-      <span class="hero-tag">JOVAN SURF SCHOOL</span>
-      <h1 class="hero-title">LEARN. SURF.<br>LIVE THE OCEAN.</h1>
-      <p class="hero-subtitle">
-        Surf lessons for all levels in a safe, fun and professional environment.
-      </p>
-      <div class="hero-buttons">
-        <button class="btn btn-filled">BOOK YOUR LESSON</button>
-        <button class="btn btn-outline" (click)="navigateToRental()">
-          <span class="play-icon">▶</span> WATCH VIDEO
-        </button>
+<!-- HERO SECTION  -->
+<main class="relative min-h-[55vh] sm:min-h-[60vh] flex items-center justify-center bg-slate-900 overflow-hidden py-12">
+    
+  <img src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=1920&q=80" 
+       alt="Jovan Surf School Background" 
+       class="absolute inset-0 w-full h-full object-cover opacity-50">
+
+  <!-- Filtro oscuro superpuesto para que las letras blancas se lean perfectamente -->
+  <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-slate-900"></div>
+
+  <!-- Contenido Centrado -->
+  <div class="relative z-10 text-center max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-3">
+    <span class="text-cyan-400 font-bold tracking-widest text-xs sm:text-sm uppercase block">
+      JOVAN SURF SCHOOL
+    </span>
+    <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight uppercase">
+      LEARN. SURF.<br>
+      LIVE THE OCEAN.
+    </h1>
+    <p class="text-slate-200 text-base sm:text-lg max-w-xl mx-auto font-medium opacity-90">
+      Surf lessons for all levels in a safe, fun and professional environment.
+    </p>
+  </div>
+</main>
+
+<!-- 2. WHAT WE OFFER SECTION -->
+<section class="bg-white py-20 px-4 sm:px-6 lg:px-8 isolation-auto">
+  <div class="max-w-7xl mx-auto">
+    <!-- Cabecera de la sección -->
+    <div class="text-center mb-16 space-y-2">
+      <span class="text-cyan-600 font-bold tracking-widest text-xs uppercase block">WHAT WE OFFER</span>
+      <h2 class="text-3xl md:text-4xl font-black text-slate-900">Surf lessons and board rental</h2>
+      <div class="flex justify-center pt-2">
+        <!-- Onda decorativa minimalista -->
+        <svg class="w-12 h-2 text-cyan-500 fill-none stroke-current stroke-2" viewBox="0 0 48 9">
+          <path d="M0 4.5Q6 0 12 4.5T24 4.5 36 4.5 48 4.5" />
+        </svg>
       </div>
+    </div>
+
+    <!-- Grid de Tarjetas (Clases y Alquiler) -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <!-- Tarjeta 1: Beginner Lessons -->
+      <article class="bg-slate-50 rounded-3xl border border-slate-100 shadow-sm overflow-visible flex flex-col group transition-all hover:shadow-md">
+        <!-- Contenedor de Imagen -->
+        <div class="h-52 bg-slate-100 relative z-10 rounded-t-3xl">
+          <!-- CAMBIA 'beginner.jpg' POR TU ARCHIVO REAL -->
+          <img src="images/begginers.jpg" 
+               alt="Beginner Surf Lessons" 
+               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+          <!-- Icono Azul Flotante -->
+          <div class="absolute -bottom-5 left-8 w-11 h-11 bg-cyan-700 text-white rounded-full flex items-center justify-center shadow-md z-50 pointer-events-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+          </div>
+        </div>
+        <div class="p-8 pt-10 flex-1 flex flex-col justify-between space-y-6">
+          <div class="space-y-3">
+            <h3 class="text-xl font-bold text-slate-900">Beginner Lessons</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">Learn to surf from scratch in a safe and fun environment. We'll be with you every step of the way.</p>
+            <ul class="space-y-2 pt-2 text-sm text-slate-700">
+              <li class="flex items-center gap-2"><span class="text-cyan-600 font-bold">✓</span> Certified instructors</li>
+              <li class="flex items-center gap-2"><span class="text-cyan-600 font-bold">✓</span> Equipment included</li>
+              <li class="flex items-center gap-2"><span class="text-cyan-600 font-bold">✓</span> Small group classes</li>
+            </ul>
+          </div>
+          <a href="#" class="text-cyan-700 font-bold text-xs uppercase tracking-wider flex items-center gap-1 hover:text-cyan-800">
+            LEARN MORE <span>→</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- Tarjeta 2: Intermediate Lessons -->
+      <article class="bg-slate-50 rounded-3xl border border-slate-100 shadow-sm overflow-visible flex flex-col group transition-all hover:shadow-md isolate">        <!-- Contenedor de Imagen -->
+        <div class="h-52 bg-slate-100 relative z-10 rounded-t-3xl">
+          <!-- CAMBIA 'intermediate.jpg' POR TU ARCHIVO REAL -->
+          <img src="images/surf-lesson.jpg" 
+               alt="Intermediate Surf Lessons" 
+               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+          <!-- Icono Azul Flotante -->
+          <div class="absolute -bottom-5 left-8 w-11 h-11 bg-cyan-700 text-white rounded-full flex items-center justify-center shadow-md z-50 pointer-events-none">            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-current" viewBox="0 0 24 24"><path d="M7 2v11h3v9l7-12h-4l4-8z"/></svg>
+          </div>
+        </div>
+        <div class="p-8 pt-10 flex-1 flex flex-col justify-between space-y-6 relative z-0">
+          <div class="space-y-3">
+            <h3 class="text-xl font-bold text-slate-900">Intermediate Lessons</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">Improve your skills, gain confidence and take your surfing to the next level with our coaches.</p>
+            <ul class="space-y-2 pt-2 text-sm text-slate-700">
+              <li class="flex items-center gap-2"><span class="text-cyan-600 font-bold">✓</span> Technique analysis</li>
+              <li class="flex items-center gap-2"><span class="text-cyan-600 font-bold">✓</span> Personalized feedback</li>
+              <li class="flex items-center gap-2"><span class="text-cyan-600 font-bold">✓</span> Sessions adapted to your level</li>
+            </ul>
+          </div>
+          <a href="#" class="text-cyan-700 font-bold text-xs uppercase tracking-wider flex items-center gap-1 hover:text-cyan-800">
+            LEARN MORE <span>→</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- Tarjeta 3: Board Rental -->
+      <article class="bg-slate-50 rounded-3xl border border-slate-100 shadow-sm overflow-visible flex flex-col group transition-all hover:shadow-md isolate">        <!-- Contenedor de Imagen -->
+        <div class="h-52 bg-slate-100 relative z-10 rounded-t-3xl">
+          <!-- CAMBIA 'rental.jpg' POR TU ARCHIVO REAL -->
+          <img src="images/tablas.jpg" 
+               alt="Surfboard Rental" 
+               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+          <!-- Icono Azul Flotante -->
+          <div class="absolute -bottom-5 left-8 w-11 h-11 bg-cyan-700 text-white rounded-full flex items-center justify-center shadow-md z-50 pointer-events-none">            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20M12 2a14.5 14.5 0 0 1 0 20M2 12h20"/></svg>
+          </div>
+        </div>
+        <div class="p-8 pt-10 flex-1 flex flex-col justify-between space-y-6 relative z-0">
+          <div class="space-y-3">
+            <h3 class="text-xl font-bold text-slate-900">Board Rental</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">Rent the perfect board for your level and enjoy the crystal clear ocean at your own pace.</p>
+            <ul class="space-y-2 pt-2 text-sm text-slate-700">
+              <li class="flex items-center gap-2"><span class="text-cyan-600 font-bold">✓</span> Boards for all levels</li>
+              <li class="flex items-center gap-2"><span class="text-cyan-600 font-bold">✓</span> Shortboards to longboards</li>
+              <li class="flex items-center gap-2"><span class="text-cyan-600 font-bold">✓</span> Well maintained equipment</li>
+            </ul>
+          </div>
+          <a href="#" class="text-cyan-700 font-bold text-xs uppercase tracking-wider flex items-center gap-1 hover:text-cyan-800">
+            LEARN MORE <span>→</span>
+          </a>
+        </div>
+      </article>
+
     </div>
   </div>
 </section>
 
-<!-- SECCIÓN NUESTROS SERVICIOS PREMIUM -->
-<section class="services-section">
-  <header class="services-header">
-    <span class="services-tag">WHAT WE OFFER</span>
-    <h2 class="services-title">Surf lessons and board rental</h2>
-    <div class="wave-divider">〰〰〰</div>
-  </header>
 
-  <div class="services-grid">
-    <!-- Tarjeta 1: Surf Lessons -->
-    <article class="service-card">
-      <div class="card-image-wrapper">
-        <img src="surf-lesson.jpg" alt="Surf Lessons" class="card-img">
-        <div class="card-icon-badge">🏄‍♂️</div>
-      </div>
-      <div class="card-body">
-        <h3 class="card-title">Beginner Lessons</h3>
-        <p class="card-description">Learn to surf from scratch in a safe and fun environment. We'll be with you every step of the way.</p>
-        <ul class="card-features">
-          <li><span class="check">✓</span> Certified instructors</li>
-          <li><span class="check">✓</span> Equipment included</li>
-          <li><span class="check">✓</span> Small group classes</li>
-        </ul>
-        <button class="btn-card">LEARN MORE →</button>
-      </div>
-    </article>
-
-    <!-- Tarjeta 2: Board Rental -->
-    <article class="service-card">
-      <div class="card-image-wrapper">
-        <img src="tablas.jpg" alt="Board Rental" class="card-img">
-        <div class="card-icon-badge">🏄</div>
-      </div>
-      <div class="card-body">
-        <h3 class="card-title">Intermediate Lessons</h3>
-        <p class="card-description">Improve your skills, gain confidence and take your surfing to the next level with our coaches.</p>
-        <ul class="card-features">
-          <li><span class="check">✓</span> Technique analysis</li>
-          <li><span class="check">✓</span> Personalized feedback</li>
-          <li><span class="check">✓</span> Sessions adapted to your level</li>
-        </ul>
-        <button class="btn-card" (click)="navigateToRental()">LEARN MORE →</button>
-      </div>
-    </article>
-
-    <!-- Tarjeta 3: Car Transport -->
-    <article class="service-card">
-      <div class="card-image-wrapper">
-        <img src="surf-van.jpg" alt="Car Transport" class="card-img">
-        <div class="card-icon-badge">🚐</div>
-      </div>
-      <div class="card-body">
-        <h3 class="card-title">Car Transport</h3>
-        <p class="card-description">Seamless transfer service to the best local surf breaks. We handle the driving and the material storage.</p>
-        <ul class="card-features">
-          <li><span class="check">✓</span> Hotel pickup & drop-off</li>
-          <li><span class="check">✓</span> Safe board transport</li>
-          <li><span class="check">✓</span> Local surf spot guiding</li>
-        </ul>
-        <button class="btn-card">LEARN MORE →</button>
-      </div>
-    </article>   
-  </div>
-</section>
-
-<!-- SECCIÓN DE PRECIOS Y TARIFAS (AHORA AFUERA, BIEN UBICADA) -->
-<section class="pricing-section">
-  <header class="services-header">
-    <span class="services-tag">OUR RATES</span>
-    <h2 class="services-title">Lessons & Rental Pricing</h2>
-    <div class="wave-divider">〰〰〰</div>
-  </header>
-
-  <div class="pricing-container">
-    <!-- COLUMNA CLASES -->
-    <div class="pricing-column">
-      <h3 class="pricing-cat-title">🏄‍♂️ Surf Lessons</h3>
-      
-      <div class="price-card">
-        <div class="price-header">
-          <h4>Private Lesson (Beginner)</h4>
-          <span class="price-tag">350K <small>/ person</small></span>
-        </div>
-        <p class="price-desc">2 hours at the beach break. Includes dedicated certified instructor and all necessary gear.</p>
-      </div>
-
-      <div class="price-card featured-price">
-        <div class="price-header">
-          <h4>Private Lesson (Intermediate)</h4>
-          <span class="price-tag">550K <small>/ person</small></span>
-        </div>
-        <p class="price-desc">Catch green waves outside with a pro instructor guiding you through the lineup and positioning.</p>
-      </div>
-
-      <div class="price-card">
-        <div class="price-header">
-          <h4>Group Lesson (Beginners)</h4>
-          <span class="price-tag">250K <small>/ person</small></span>
-        </div>
-        <p class="price-desc">Max 5 people per group. 2 hours of pure fun with 3 instructors ensuring maximum safety and focus.</p>
-      </div>
+<!-- 3. NUEVA SECCIÓN DE PRECIOS: 4 TARJETAS PEQUEÑAS -->
+<section class="bg-slate-50 py-20 px-4 sm:px-6 lg:px-8 border-t border-slate-100">
+  <div class="max-w-7xl mx-auto space-y-12">
+    
+    <!-- Cabecera Precios -->
+    <div class="text-center mb-12 space-y-2">
+      <span class="text-cyan-600 font-bold tracking-widest text-xs uppercase block">PRICING PLANS</span>
+      <h2 class="text-3xl font-black text-slate-900">Affordable Surf Services</h2>
     </div>
 
-    <!-- COLUMNA ALQUILER -->
-    <div class="pricing-column">
-      <h3 class="pricing-cat-title">🏄 Board Rental</h3>
+    <!-- Grid de 4 columnas en Desktop -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       
-      <div class="price-card rental-card">
-        <div class="price-header">
-          <h4>Full Day Rental</h4>
-          <span class="price-tag">100K <small>/ day</small></span>
+      <!-- Tarjeta 1: Private Beginner -->
+      <div class="bg-white p-6 rounded-2xl border border-slate-200/60 shadow-sm flex flex-col justify-between transition-all hover:shadow-md">
+        <div class="space-y-3">
+          <div class="flex items-center gap-2 text-slate-700 font-bold text-sm">
+            <span>🏄‍♂️</span> Lessons
+          </div>
+          <h3 class="font-extrabold text-slate-900 text-lg leading-snug">Private Lesson (Beginner)</h3>
+          <p class="text-slate-500 text-xs leading-relaxed">2 hours at the beach break. Includes dedicated certified instructor and all necessary gear.</p>
         </div>
-        <p class="price-desc">Grab any board from our premium fleet (Softboards, Funboards, or Longboards) and surf at your own pace all day long.</p>
-        <ul class="rental-specs">
-          <li>✓ Switch boards anytime if available</li>
-          <li>✓ Wax included</li>
-          <li>✓ Leash & lycra included</li>
-        </ul>
+        <div class="border-t border-slate-100 pt-4 mt-6 flex items-baseline justify-between">
+          <span class="text-slate-400 text-xs font-medium">Per person</span>
+          <span class="text-2xl font-black text-cyan-700">350K</span>
+        </div>
       </div>
-      
-      <div class="pricing-notice">
-        <p>💡 <strong>Planning a long trip?</strong> Ask our staff at the school for special weekly discounts on equipment rentals!</p>
+
+      <!-- Tarjeta 2: Private Intermediate (Destacada con borde superior de color) -->
+      <div class="bg-white p-6 rounded-2xl border-t-4 border-t-cyan-600 border-x border-b border-slate-200/60 shadow-md flex flex-col justify-between transition-all hover:shadow-lg">
+        <div class="space-y-3">
+          <div class="flex items-center gap-2 text-cyan-600 font-bold text-sm">
+            <span>🏄‍♂️</span> Most Popular
+          </div>
+          <h3 class="font-extrabold text-slate-900 text-lg leading-snug">Private Lesson (Intermediate)</h3>
+          <p class="text-slate-500 text-xs leading-relaxed">Catch green waves outside with a pro instructor guiding you through the lineup and positioning.</p>
+        </div>
+        <div class="border-t border-slate-100 pt-4 mt-6 flex items-baseline justify-between">
+          <span class="text-slate-400 text-xs font-medium">Per person</span>
+          <span class="text-2xl font-black text-cyan-700">550K</span>
+        </div>
       </div>
+
+      <!-- Tarjeta 3: Group Beginners -->
+      <div class="bg-white p-6 rounded-2xl border border-slate-200/60 shadow-sm flex flex-col justify-between transition-all hover:shadow-md">
+        <div class="space-y-3">
+          <div class="flex items-center gap-2 text-slate-700 font-bold text-sm">
+            <span>👥</span> Groups
+          </div>
+          <h3 class="font-extrabold text-slate-900 text-lg leading-snug">Group Lesson (Beginners)</h3>
+          <p class="text-slate-500 text-xs leading-relaxed">Max 5 people per group. 2 hours of pure fun with 3 instructors ensuring safety and individual focus.</p>
+        </div>
+        <div class="border-t border-slate-100 pt-4 mt-6 flex items-baseline justify-between">
+          <span class="text-slate-400 text-xs font-medium">Per person</span>
+          <span class="text-2xl font-black text-cyan-700">250K</span>
+        </div>
+      </div>
+
+      <!-- Tarjeta 4: Full Day Rental (Estilo Discontinuo de la captura) -->
+      <div class="bg-white p-6 rounded-2xl border-2 border-dashed border-slate-200 shadow-sm flex flex-col justify-between transition-all hover:shadow-md">
+        <div class="space-y-3">
+          <div class="flex items-center gap-2 text-slate-700 font-bold text-sm">
+            <span>🛹</span> Rental
+          </div>
+          <h3 class="font-extrabold text-slate-900 text-lg leading-snug">Full Day Board Rental</h3>
+          <p class="text-slate-500 text-xs leading-relaxed">Premium fleet (Soft, Fun, or Longboards). Includes wax, leash and lycra to surf at your own pace.</p>
+        </div>
+        <div class="border-t border-slate-100 pt-4 mt-6 flex items-baseline justify-between">
+          <span class="text-slate-400 text-xs font-medium">Per day</span>
+          <span class="text-2xl font-black text-cyan-700">100K</span>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
+
+<app-footer></app-footer>

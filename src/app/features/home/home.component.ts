@@ -1,10 +1,11 @@
 import { Component, inject } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
+import { FooterComponent } from '../../shared/component/footer/footer.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [RouterLink, FooterComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
