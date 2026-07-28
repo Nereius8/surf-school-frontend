@@ -1,21 +1,27 @@
 import { Component, inject, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { SurfboardService } from '../../../core/services/surfboard.service';
-import { Surfboard } from '../../../shared/models/surfboard';
-
+import { SurfboardService } from '../../core/services/surfboard.service';
+import { Surfboard } from '../../shared/models/surfboard';
+import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-rental-form',
-  standalone: true,
-  imports: [ FormsModule],
-  templateUrl: './rental-form.component.html',
-  styleUrl: './rental-form.component.css'
+  selector: 'app-rental',
+  imports: [FormsModule, CommonModule],
+  templateUrl: './rental.component.html',
+  styleUrl: './rental.component.css'
 })
-export class RentalFormComponent {
+export class RentalComponent {
+
   public boardService = inject(SurfboardService);
+  public defaultBoardImage = 'tablas.jpg';
   
+  // Lógica rescatada del Formulario
   public showForm = signal<boolean>(false);
   public newBoard: Surfboard = this.resetForm();
+
+  constructor() {
+    this.boardService.loadSurfboards();
+  }
 
   toggleForm(): void {
     this.showForm.update(val => !val);
@@ -29,6 +35,14 @@ export class RentalFormComponent {
           this.showForm.set(false);
         },
         error: (err) => console.error('Error saving surfboard:', err)
+      });
+    }
+  }
+
+  onDelete(id: number): void {
+    if (confirm('Are you sure you want to remove this surfboard from the inventory?')) {
+      this.boardService.deleteSurfboard(id).subscribe({
+        error: (err) => console.error('Error deleting surfboard:', err)
       });
     }
   }
