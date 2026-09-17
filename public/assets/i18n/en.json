@@ -1,0 +1,110 @@
+{
+  "NAVBAR": {
+    "HOME": "Home",
+    "LESSONS": "Surf Lessons",
+    "RENTAL": "Board Rental",
+    "TRANSPORT": "Transport",
+    "FOOD": "Food & Bar",
+    "LOCATION": "Location",
+    "BOOK_NOW": "BOOK NOW"
+  }
+  ,
+  "WELCOME": "Welcome to our surfboard shop",
+  "transport": {
+    "subtitle": "EXTRA SERVICES",
+    "title": "Explore Lombok With Us",
+    "cardTitle": "Private Driver & Taxi Service",
+    "cardDescription": "Need a transfer from the airport or want to discover the best spots around Lombok? We've got you covered. Book a <strong class='text-slate-900 dark:text-white font-semibold'>trusted local private driver</strong> directly through us for safe trips, hotel transfers, and island tours at fair local rates.",
+    "feature1": "Airport Pickups",
+    "feature2": "Full Day Tours",
+    "feature3": "Hotel Transfers",
+    "button": "Book a Ride",
+    "buttonHint": "Direct contact via WhatsApp"
+  }
+  , "HERO": {
+    "SUBTITLE": "JOFAN SURF SCHOOL",
+    "TITLE_1": "Learn to surf",
+    "TITLE_2": "& live the ocean",
+    "DESC": "Surf lessons for all levels in a safe, fun and professional environment."
+  },
+  "OFFER": {
+    "TAG": "WHAT WE OFFER",
+    "TITLE": "Surf lessons and board rental",
+    "BEGINNER": {
+      "TITLE": "Beginner Lessons",
+      "DESC": "Learn to surf from scratch in a safe and fun environment.",
+      "ITEM1": "Certified instructors",
+      "ITEM2": "Equipment included",
+      "ITEM3": "Small group classes"
+    },
+    "INTERMEDIATE": {
+      "TITLE": "Intermediate Lessons",
+      "DESC": "Improve your skills and take your surfing to the next level.",
+      "ITEM1": "Technique analysis",
+      "ITEM2": "Personalized feedback",
+      "ITEM3": "Sessions adapted to your level"
+    },
+    "RENTAL": {
+      "TITLE": "Board Rental",
+      "DESC": "Rent the perfect board for your level and enjoy the ocean.",
+      "ITEM1": "Boards for all levels",
+      "ITEM2": "Shortboards to longboards",
+      "ITEM3": "Well maintained equipment"
+    },
+    "MORE": "LEARN MORE"
+  },
+  "PRICING": {
+    "TAG": "PRICING & PLANS",
+    "TITLE": "Clear Pricing No Surprises",
+    "POPULAR": "MOST POPULAR",
+    "PER_PERSON": "per person",
+    "PER_DAY": "per day",
+    "BEGINNER": {
+      "TITLE": "Private Lesson (Beginner)",
+      "DESC": "2 hours at the beach break with instructor and gear."
+    },
+    "INTERMEDIATE": {
+      "TITLE": "Private Lesson (Intermediate)",
+      "DESC": "Catch green waves outside with pro coaching."
+    },
+    "GROUP": {
+      "TITLE": "Group Lesson",
+      "DESC": "Max 5 people. 2 hours of fun and safe environment."
+    },
+    "RENTAL": {
+      "TITLE": "Board Rental",
+      "DESC": "Full day board rental with leash and wax included."
+    }
+  },
+  "LOCATION_SEC": {
+    "TAG": "VISIT US",
+    "TITLE": "Where to find us",
+    "DESC": "Located directly on the beach, next to the best waves and our beach bar.",
+    "ADDRESS_TITLE": "Address",
+    "ADDRESS_TEXT": "Selong Belanak Beach, Lombok, Indonesia",
+    "HOURS_TITLE": "Opening Hours",
+    "HOURS_TEXT": "Monday - Sunday: 7:00 AM - 6:00 PM"
+  },
+  "SERVICES": {
+  "TRANSPORT_TITLE": "Transport & Airport Taxi",
+  "TRANSPORT_DESC": "We pick you up anywhere in Lombok. Safe and comfortable transfers.",
+  "FOOD_TITLE": "Beach Bar & Food",
+  "FOOD_DESC": "Fresh local meals and cold drinks right after your surf session."
+},
+"WHATSAPP": {
+  "BOOK_LESSON": "Hello! I would like to book a surf lesson.",
+  "BOOK_RENTAL": "Hello! I would like to rent a surfboard.",
+  "BOOK_TAXI": "Hello! I need transport/taxi service in Lombok."
+},
+"CONTACT": {
+  "TITLE": "Direct Booking & Info",
+  "DESC": "Call or message us directly on WhatsApp for instant availability and questions.",
+  "PHONE_LABEL": "Phone / WhatsApp",
+  "CALL_NOW": "Call / Send WhatsApp"
+},
+"FOOD_SEC": {
+  "TITLE": "Beach Bar & Local Food",
+  "DESC": "Enjoy fresh, healthy local meals, tropical fruits, and cold coconuts right on the beach."
+}
+
+}

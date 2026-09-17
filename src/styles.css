@@ -1,5 +1,6 @@
 
 @import "tailwindcss";
+@variant dark (&:where(.dark, .dark *));
 /* Paleta de colores de Jofan Surf School */
 :root {
     --jovan-teal: #0e6f7c;
@@ -12,15 +13,24 @@
     --jovan-text-muted: #64748b;
     --jovan-border: #e2e8f0;
   }
+
+  .dark {
+    --jovan-bg: #020617;
+    --jovan-card-bg: #0f172a;
+    --jovan-text-main: #f8fafc;
+    --jovan-text-muted: #94a3b8;
+    --jovan-border: #1e293b;
+}
   
   /* Estilos globales */
   body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--jofan-bg);
-    color: var(--jofan-text-main);
+    background-color: var(--jovan-bg);
+    color: var(--jovan-text-main);
     -webkit-font-smoothing: antialiased;
-  }
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
   
   /* Contenedor principal */
   .app-container {

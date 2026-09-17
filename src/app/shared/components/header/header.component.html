@@ -1,65 +1,91 @@
-<nav class="sticky top-0 z-50 bg-white border-b border-slate-100 shadow-sm">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between h-16 items-center">
-        
-        <!-- LOGO (Mantiene tu idea original) -->
-        <div routerLink="/home" class="flex items-center space-x-3 cursor-pointer group">
-          <div class="text-3xl transition-transform group-hover:scale-110 duration-200">🌊</div>
-          <div class="flex flex-col">
-            <span class="text-xl font-black tracking-wider text-slate-950 leading-none">JOVAN</span>
-            <span class="text-xs font-medium text-cyan-600 tracking-wide">Surf School</span>
-          </div>
+<nav class="sticky top-0 z-50 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-100 dark:border-slate-800 shadow-sm transition-colors duration-300">
+  <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-14 sm:h-16 items-center">
+      
+      <!-- LOGO -->
+      <button (click)="scrollTo('hero')" class="flex items-center space-x-2 sm:space-x-3 cursor-pointer group text-left">
+        <img 
+          src="images/logo.jpg" 
+          alt="JOFAN Surf School Logo" 
+          class="h-8 sm:h-9 w-auto transition-transform group-hover:scale-110 duration-200 object-contain"
+        />
+        <div class="flex flex-col">
+          <span class="text-lg sm:text-xl font-black tracking-wider text-slate-950 dark:text-white leading-none">JOFAN</span>
+          <span class="text-[10px] sm:text-xs font-medium text-cyan-600 dark:text-cyan-400 tracking-wide">Surf School</span>
         </div>
-        
-        <!-- MENÚ ESCRITORIO (Oculto en móviles, visible desde 'md') -->
-        <ul class="hidden md:flex items-center space-x-1 lg:space-x-4 text-sm font-medium text-slate-600">
-          <li><a routerLink="/home" routerLinkActive="text-cyan-600 border-b-2 border-cyan-600" [routerLinkActiveOptions]="{exact: true}" class="px-3 py-2 hover:text-cyan-600 transition-colors duration-150">Home</a></li>
-          <li><a routerLink="/lessons" routerLinkActive="text-cyan-600 border-b-2 border-cyan-600" class="px-3 py-2 hover:text-cyan-600 transition-colors duration-150">Surf Lessons</a></li>
-          <li><a routerLink="/rental" routerLinkActive="text-cyan-600 border-b-2 border-cyan-600" class="px-3 py-2 hover:text-cyan-600 transition-colors duration-150">Board Rental</a></li>
-          <li><a routerLink="/transport" routerLinkActive="text-cyan-600 border-b-2 border-cyan-600" class="px-3 py-2 hover:text-cyan-600 transition-colors duration-150">Transport</a></li>
-          <li><a routerLink="/location" routerLinkActive="text-cyan-600 border-b-2 border-cyan-600" class="px-3 py-2 hover:text-cyan-600 transition-colors duration-150">Location</a></li>
-        </ul>
-        
-        <!-- BOTÓN RESERVAS ESCRITORIO (Oculto en móvil) -->
-        <div class="hidden md:block">
-          <button class="bg-cyan-600 hover:bg-cyan-700 text-white font-bold tracking-wider px-6 py-2.5 rounded-full text-xs transition-all shadow-md hover:shadow-cyan-100 active:scale-95">
-            BOOK NOW
-          </button>
+      </button>
+      
+      <!-- MENÚ ESCRITORIO (>= md) -->
+      <ul class="hidden md:flex items-center space-x-1 lg:space-x-4 text-sm font-medium text-slate-600 dark:text-slate-300">
+        <li><button (click)="scrollTo('hero')" class="px-3 py-2 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">{{ 'NAVBAR.HOME' | translate }}</button></li>
+        <li><button (click)="scrollTo('lessons')" class="px-3 py-2 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">{{ 'NAVBAR.LESSONS' | translate }}</button></li>
+        <li><button (click)="scrollTo('rental')" class="px-3 py-2 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">{{ 'NAVBAR.RENTAL' | translate }}</button></li>
+        <li><button (click)="scrollTo('transport')" class="px-3 py-2 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">{{ 'NAVBAR.TRANSPORT' | translate }}</button></li>
+        <li><button (click)="scrollTo('location')" class="px-3 py-2 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">{{ 'NAVBAR.LOCATION' | translate }}</button></li>
+      </ul>
+      
+      <!-- CONTROLES ESCRITORIO (>= md) -->
+      <div class="hidden md:flex items-center gap-3">
+        <button (click)="toggleTheme()" type="button" class="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+          {{ isDarkMode ? '☀️' : '🌙' }}
+        </button>
+
+        <div class="flex items-center bg-slate-100 dark:bg-slate-800 p-1 rounded-xl text-xs font-bold">
+          <button (click)="switchLanguage('es')" type="button" [class]="currentLang === 'es' ? 'bg-white dark:bg-slate-700 text-cyan-600 shadow-sm' : 'text-slate-500'" class="px-2 py-1 rounded-lg transition-all">ES</button>
+          <button (click)="switchLanguage('en')" type="button" [class]="currentLang === 'en' ? 'bg-white dark:bg-slate-700 text-cyan-600 shadow-sm' : 'text-slate-500'" class="px-2 py-1 rounded-lg transition-all">EN</button>
         </div>
-  
-        <!-- BOTÓN MENÚ HAMBURGUESA (Solo visible en móviles) -->
-        <div class="flex md:hidden">
-          <button (click)="toggleMenu()" type="button" class="text-slate-600 hover:text-slate-900 focus:outline-none p-2">
-            @if (!isMenuOpen) {
-                <!-- Icono cuando el menú está cerrado -->
-                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                </svg>
-              } @else {
-                <!-- Icono 'X' cuando el menú está abierto -->
-                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                </svg>
-              }
-            </button>
-  
+
+        <a href="https://wa.me/6281918110376?text={{ 'WHATSAPP.BOOK_LESSON' | translate }}" 
+           target="_blank" 
+           class="bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold px-5 py-2.5 rounded-xl text-xs uppercase tracking-wider transition-all shadow-md active:scale-95 flex items-center gap-1.5">
+          <span>BOOK NOW</span>
+        </a>
+      </div>
+
+      <!-- CONTROLES MÓVIL (< md) VISIBLES EN HEADER -->
+      <div class="flex items-center md:hidden gap-1.5">
+        <!-- Selector Idioma Móvil Directo -->
+        <div class="flex items-center bg-slate-100 dark:bg-slate-800 p-0.5 rounded-lg text-[11px] font-bold">
+          <button (click)="switchLanguage('es')" type="button" [class]="currentLang === 'es' ? 'bg-white dark:bg-slate-700 text-cyan-600 shadow-xs' : 'text-slate-500 dark:text-slate-400'" class="px-2 py-1 rounded-md transition-all">ES</button>
+          <button (click)="switchLanguage('en')" type="button" [class]="currentLang === 'en' ? 'bg-white dark:bg-slate-700 text-cyan-600 shadow-xs' : 'text-slate-500 dark:text-slate-400'" class="px-2 py-1 rounded-md transition-all">EN</button>
+        </div>
+
+        <!-- Modo Oscuro Móvil -->
+        <button (click)="toggleTheme()" type="button" class="p-1.5 text-lg rounded-lg text-slate-700 dark:text-slate-200">
+          {{ isDarkMode ? '☀️' : '🌙' }}
+        </button>
+
+        <!-- Botón Hamburguesa -->
+        <button (click)="toggleMenu()" type="button" class="text-slate-700 dark:text-slate-200 p-1.5 rounded-lg">
+          @if (!isMenuOpen) {
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          } @else {
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          }
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MENÚ DESPLEGABLE MÓVIL -->
+  @if (isMenuOpen) {
+    <div class="md:hidden bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 px-4 pt-3 pb-5 space-y-3">
+      <ul class="flex flex-col space-y-2 font-medium text-slate-700 dark:text-slate-200 text-base">
+        <li><button (click)="scrollTo('hero'); toggleMenu()" class="w-full text-left py-2 border-b border-slate-50 dark:border-slate-800 hover:text-cyan-600">{{ 'NAVBAR.HOME' | translate }}</button></li>
+        <li><button (click)="scrollTo('lessons'); toggleMenu()" class="w-full text-left py-2 border-b border-slate-50 dark:border-slate-800 hover:text-cyan-600">{{ 'NAVBAR.LESSONS' | translate }}</button></li>
+        <li><button (click)="scrollTo('rental'); toggleMenu()" class="w-full text-left py-2 border-b border-slate-50 dark:border-slate-800 hover:text-cyan-600">{{ 'NAVBAR.RENTAL' | translate }}</button></li>
+        <li><button (click)="scrollTo('transport'); toggleMenu()" class="w-full text-left py-2 border-b border-slate-50 dark:border-slate-800 hover:text-cyan-600">{{ 'NAVBAR.TRANSPORT' | translate }}</button></li>
+        <li><button (click)="scrollTo('location'); toggleMenu()" class="w-full text-left py-2 hover:text-cyan-600">{{ 'NAVBAR.LOCATION' | translate }}</button></li>
+      </ul>
+
+      <div class="pt-2 flex items-center justify-center">
+        <a href="https://wa.me/6281918110376?text={{ 'WHATSAPP.BOOK_LESSON' | translate }}" 
+           target="_blank" 
+           class="w-full text-center bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold px-5 py-3 rounded-xl text-sm uppercase tracking-wider transition-all shadow-md active:scale-95">
+          BOOK NOW
+        </a>
       </div>
     </div>
-  
-    <!-- MENÚ MÓVIL DESPLEGABLE (Solo se muestra si isMenuOpen es true) -->
-    @if (isMenuOpen) {
-        <div class="md:hidden bg-white border-t border-slate-100">
-          <ul class="px-2 pt-2 pb-4 space-y-1 text-base font-medium text-slate-700">
-            <li><a routerLink="/home" (click)="isMenuOpen = false" routerLinkActive="bg-cyan-50 text-cyan-600" class="block px-4 py-3 rounded-lg">Home</a></li>
-            <li><a routerLink="/lessons" (click)="isMenuOpen = false" routerLinkActive="bg-cyan-50 text-cyan-600" class="block px-4 py-3 rounded-lg">Surf Lessons</a></li>
-            <li><a routerLink="/rental" (click)="isMenuOpen = false" routerLinkActive="bg-cyan-50 text-cyan-600" class="block px-4 py-3 rounded-lg">Board Rental</a></li>
-            <li><a routerLink="/transport" (click)="isMenuOpen = false" routerLinkActive="bg-cyan-50 text-cyan-600" class="block px-4 py-3 rounded-lg">Transport</a></li>
-            <li><a routerLink="/location" (click)="isMenuOpen = false" routerLinkActive="bg-cyan-50 text-cyan-600" class="block px-4 py-3 rounded-lg">Location</a></li>
-            <li class="pt-4 px-4">
-              <button class="w-full bg-cyan-600 hover:bg-cyan-700 text-white font-bold tracking-wider py-3 rounded-xl text-sm shadow-md">
-                BOOK NOW
-              </button>
-            </li>
-          </ul>
-        </div>
-      }
+  }
+</nav>

@@ -1,126 +1,109 @@
-<!-- HERO SECTION  -->
-<main class="relative min-h-[55vh] sm:min-h-[60vh] flex items-center justify-center bg-slate-900 overflow-hidden py-12">
+<!-- HERO SECTION COMPACTO Y MODERNO -->
+<main id="hero" class="bg-slate-100 dark:bg-slate-950 py-8 md:py-12 px-4 sm:px-6 lg:px-8 border-b border-slate-200 dark:border-slate-800 transition-colors duration-300">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
     
-  <img src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=1920&q=80" 
-       alt="Jovan Surf School Background" 
-       class="absolute inset-0 w-full h-full object-cover opacity-50">
+    <!-- Texto a la izquierda (5 columnas) -->
+    <div class="lg:col-span-5 text-center lg:text-left space-y-3">
+      <span class="text-cyan-600 dark:text-cyan-400 font-extrabold tracking-wider text-[11px] sm:text-xs uppercase block">
+        {{ 'HERO.SUBTITLE' | translate }}
+      </span>
+      
+      <!-- Titular: Slate oscuro por defecto / Blanco en modo oscuro -->
+      <h1 class="text-2xl sm:text-4xl lg:text-5xl font-black text-slate-900 dark:text-white tracking-tight leading-tight">
+       {{ 'HERO.TITLE_1' | translate }} 
+       {{ 'HERO.TITLE_2' | translate }}
+      </h1>
+      
+      <!-- Subtítulo: Slate medio por defecto / Claro en modo oscuro -->
+      <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-base leading-relaxed max-w-lg mx-auto lg:mx-0">
+        {{ 'HERO.DESC' | translate }}
+      </p>
+      
+      <div class="pt-1">
+        <a href="https://wa.me/6281918110376?text={{ 'WHATSAPP.BOOK_LESSON' | translate }}" 
+           target="_blank" 
+           class="inline-flex items-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-black px-5 py-2.5 sm:px-6 sm:py-3 rounded-xl text-xs uppercase tracking-wider transition-all shadow-md active:scale-95">
+          <span>💬 {{ 'NAVBAR.BOOK_NOW' | translate }}</span>
+        </a>
+      </div>
+    </div>
 
-  <!-- Filtro oscuro superpuesto para que las letras blancas se lean perfectamente -->
-  <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-slate-900"></div>
+    <!-- Foto en Card contenida a la derecha (7 columnas) -->
+    <div class="lg:col-span-7 flex justify-center">
+      <div class="relative w-full max-w-lg h-[260px] sm:h-[380px] lg:h-[420px] rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-2xl bg-slate-200 dark:bg-slate-800">
+        <img src="images/lombok.jpg" alt="Jofan Surf School Team" class="w-full h-full object-cover object-center">
+      </div>
+    </div>
 
-  <!-- Contenido Centrado -->
-  <div class="relative z-10 text-center max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-3">
-    <span class="text-cyan-400 font-bold tracking-widest text-xs sm:text-sm uppercase block">
-      JOVAN SURF SCHOOL
-    </span>
-    <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight uppercase">
-      LEARN. SURF.<br>
-      LIVE THE OCEAN.
-    </h1>
-    <p class="text-slate-200 text-base sm:text-lg max-w-xl mx-auto font-medium opacity-90">
-      Surf lessons for all levels in a safe, fun and professional environment.
-    </p>
   </div>
 </main>
 
-<!-- 2. WHAT WE OFFER SECTION -->
-<section class="bg-white py-20 px-4 sm:px-6 lg:px-8 isolation-auto">
+<!-- LESSONS & RENTAL SECTION -->
+<section id="lessons" class="bg-white dark:bg-slate-900 py-10 md:py-20 px-4 sm:px-6 lg:px-8 transition-colors duration-300">
   <div class="max-w-7xl mx-auto">
-    <!-- Cabecera de la sección -->
-    <div class="text-center mb-16 space-y-2">
-      <span class="text-cyan-600 font-bold tracking-widest text-xs uppercase block">WHAT WE OFFER</span>
-      <h2 class="text-3xl md:text-4xl font-black text-slate-900">Surf lessons and board rental</h2>
-      <div class="flex justify-center pt-2">
-        <!-- Onda decorativa minimalista -->
-        <svg class="w-12 h-2 text-cyan-500 fill-none stroke-current stroke-2" viewBox="0 0 48 9">
-          <path d="M0 4.5Q6 0 12 4.5T24 4.5 36 4.5 48 4.5" />
-        </svg>
-      </div>
+    <div class="text-center mb-8 md:mb-16 space-y-1">
+      <span class="text-cyan-600 dark:text-cyan-400 font-bold tracking-widest text-xs uppercase block">
+        {{ 'OFFER.TAG' | translate }}
+      </span>
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 dark:text-white">
+        {{ 'OFFER.TITLE' | translate }}
+      </h2>
     </div>
 
-    <!-- Grid de Tarjetas (Clases y Alquiler) -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <!-- Grid Tarjetas -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8">
       
-      <!-- Tarjeta 1: Beginner Lessons -->
-      <article class="bg-slate-50 rounded-3xl border border-slate-100 shadow-sm overflow-visible flex flex-col group transition-all hover:shadow-md">
-        <!-- Contenedor de Imagen -->
-        <div class="h-52 bg-slate-100 relative z-10 rounded-t-3xl">
-          <!-- CAMBIA 'beginner.jpg' POR TU ARCHIVO REAL -->
-          <img src="images/begginers.jpg" 
-               alt="Beginner Surf Lessons" 
-               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-          <!-- Icono Azul Flotante -->
-          <div class="absolute -bottom-5 left-8 w-11 h-11 bg-cyan-700 text-white rounded-full flex items-center justify-center shadow-md z-50 pointer-events-none">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-          </div>
+      <!-- Beginner -->
+      <article class="bg-slate-50 dark:bg-slate-800 rounded-2xl sm:rounded-3xl border border-slate-200/60 dark:border-slate-700 shadow-sm overflow-hidden flex flex-col justify-between transition-all">
+        <div class="h-44 sm:h-52 bg-slate-100 dark:bg-slate-700 relative">
+          <img src="images/principiantes.jpg" alt="Beginner Surf Lessons" class="w-full h-full object-cover">
         </div>
-        <div class="p-8 pt-10 flex-1 flex flex-col justify-between space-y-6">
-          <div class="space-y-3">
-            <h3 class="text-xl font-bold text-slate-900">Beginner Lessons</h3>
-            <p class="text-slate-600 text-sm leading-relaxed">Learn to surf from scratch in a safe and fun environment. We'll be with you every step of the way.</p>
-            <ul class="space-y-2 pt-2 text-sm text-slate-700">
-              <li class="flex items-center gap-2"><span class="text-cyan-600 font-bold">✓</span> Certified instructors</li>
-              <li class="flex items-center gap-2"><span class="text-cyan-600 font-bold">✓</span> Equipment included</li>
-              <li class="flex items-center gap-2"><span class="text-cyan-600 font-bold">✓</span> Small group classes</li>
+        <div class="p-5 sm:p-8 flex-1 flex flex-col justify-between space-y-4 sm:space-y-6">
+          <div class="space-y-2 sm:space-y-3">
+            <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">{{ 'OFFER.BEGINNER.TITLE' | translate }}</h3>
+            <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed">{{ 'OFFER.BEGINNER.DESC' | translate }}</p>
+            <ul class="space-y-1.5 pt-1 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
+              <li class="flex items-center gap-2"><span class="text-cyan-600 dark:text-cyan-400 font-bold">✓</span> {{ 'OFFER.BEGINNER.ITEM1' | translate }}</li>
+              <li class="flex items-center gap-2"><span class="text-cyan-600 dark:text-cyan-400 font-bold">✓</span> {{ 'OFFER.BEGINNER.ITEM2' | translate }}</li>
+              <li class="flex items-center gap-2"><span class="text-cyan-600 dark:text-cyan-400 font-bold">✓</span> {{ 'OFFER.BEGINNER.ITEM3' | translate }}</li>
             </ul>
           </div>
-          <a href="#" class="text-cyan-700 font-bold text-xs uppercase tracking-wider flex items-center gap-1 hover:text-cyan-800">
-            LEARN MORE <span>→</span>
-          </a>
         </div>
       </article>
 
-      <!-- Tarjeta 2: Intermediate Lessons -->
-      <article class="bg-slate-50 rounded-3xl border border-slate-100 shadow-sm overflow-visible flex flex-col group transition-all hover:shadow-md isolate">        <!-- Contenedor de Imagen -->
-        <div class="h-52 bg-slate-100 relative z-10 rounded-t-3xl">
-          <!-- CAMBIA 'intermediate.jpg' POR TU ARCHIVO REAL -->
-          <img src="images/surf-lesson.jpg" 
-               alt="Intermediate Surf Lessons" 
-               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-          <!-- Icono Azul Flotante -->
-          <div class="absolute -bottom-5 left-8 w-11 h-11 bg-cyan-700 text-white rounded-full flex items-center justify-center shadow-md z-50 pointer-events-none">            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-current" viewBox="0 0 24 24"><path d="M7 2v11h3v9l7-12h-4l4-8z"/></svg>
-          </div>
+      <!-- Intermediate -->
+      <article class="bg-slate-50 dark:bg-slate-800 rounded-2xl sm:rounded-3xl border border-slate-200/60 dark:border-slate-700 shadow-sm overflow-hidden flex flex-col justify-between transition-all">
+        <div class="h-44 sm:h-52 bg-slate-100 dark:bg-slate-700 relative">
+          <img src="images/intermedio.jpg" alt="Intermediate Surf Lessons" class="w-full h-full object-cover">
         </div>
-        <div class="p-8 pt-10 flex-1 flex flex-col justify-between space-y-6 relative z-0">
-          <div class="space-y-3">
-            <h3 class="text-xl font-bold text-slate-900">Intermediate Lessons</h3>
-            <p class="text-slate-600 text-sm leading-relaxed">Improve your skills, gain confidence and take your surfing to the next level with our coaches.</p>
-            <ul class="space-y-2 pt-2 text-sm text-slate-700">
-              <li class="flex items-center gap-2"><span class="text-cyan-600 font-bold">✓</span> Technique analysis</li>
-              <li class="flex items-center gap-2"><span class="text-cyan-600 font-bold">✓</span> Personalized feedback</li>
-              <li class="flex items-center gap-2"><span class="text-cyan-600 font-bold">✓</span> Sessions adapted to your level</li>
+        <div class="p-5 sm:p-8 flex-1 flex flex-col justify-between space-y-4 sm:space-y-6">
+          <div class="space-y-2 sm:space-y-3">
+            <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">{{ 'OFFER.INTERMEDIATE.TITLE' | translate }}</h3>
+            <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed">{{ 'OFFER.INTERMEDIATE.DESC' | translate }}</p>
+            <ul class="space-y-1.5 pt-1 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
+              <li class="flex items-center gap-2"><span class="text-cyan-600 dark:text-cyan-400 font-bold">✓</span> {{ 'OFFER.INTERMEDIATE.ITEM1' | translate }}</li>
+              <li class="flex items-center gap-2"><span class="text-cyan-600 dark:text-cyan-400 font-bold">✓</span> {{ 'OFFER.INTERMEDIATE.ITEM2' | translate }}</li>
+              <li class="flex items-center gap-2"><span class="text-cyan-600 dark:text-cyan-400 font-bold">✓</span> {{ 'OFFER.INTERMEDIATE.ITEM3' | translate }}</li>
             </ul>
           </div>
-          <a href="#" class="text-cyan-700 font-bold text-xs uppercase tracking-wider flex items-center gap-1 hover:text-cyan-800">
-            LEARN MORE <span>→</span>
-          </a>
         </div>
       </article>
 
-      <!-- Tarjeta 3: Board Rental -->
-      <article class="bg-slate-50 rounded-3xl border border-slate-100 shadow-sm overflow-visible flex flex-col group transition-all hover:shadow-md isolate">        <!-- Contenedor de Imagen -->
-        <div class="h-52 bg-slate-100 relative z-10 rounded-t-3xl">
-          <!-- CAMBIA 'rental.jpg' POR TU ARCHIVO REAL -->
-          <img src="images/tablas.jpg" 
-               alt="Surfboard Rental" 
-               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-          <!-- Icono Azul Flotante -->
-          <div class="absolute -bottom-5 left-8 w-11 h-11 bg-cyan-700 text-white rounded-full flex items-center justify-center shadow-md z-50 pointer-events-none">            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20M12 2a14.5 14.5 0 0 1 0 20M2 12h20"/></svg>
-          </div>
+      <!-- Rental -->
+      <article id="rental" class="bg-slate-50 dark:bg-slate-800 rounded-2xl sm:rounded-3xl border border-slate-200/60 dark:border-slate-700 shadow-sm overflow-hidden flex flex-col justify-between transition-all">
+        <div class="h-44 sm:h-52 bg-slate-100 dark:bg-slate-700 relative">
+          <img src="images/tablas.jpg" alt="Surfboard Rental" class="w-full h-full object-cover">
         </div>
-        <div class="p-8 pt-10 flex-1 flex flex-col justify-between space-y-6 relative z-0">
-          <div class="space-y-3">
-            <h3 class="text-xl font-bold text-slate-900">Board Rental</h3>
-            <p class="text-slate-600 text-sm leading-relaxed">Rent the perfect board for your level and enjoy the crystal clear ocean at your own pace.</p>
-            <ul class="space-y-2 pt-2 text-sm text-slate-700">
-              <li class="flex items-center gap-2"><span class="text-cyan-600 font-bold">✓</span> Boards for all levels</li>
-              <li class="flex items-center gap-2"><span class="text-cyan-600 font-bold">✓</span> Shortboards to longboards</li>
-              <li class="flex items-center gap-2"><span class="text-cyan-600 font-bold">✓</span> Well maintained equipment</li>
+        <div class="p-5 sm:p-8 flex-1 flex flex-col justify-between space-y-4 sm:space-y-6">
+          <div class="space-y-2 sm:space-y-3">
+            <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">{{ 'OFFER.RENTAL.TITLE' | translate }}</h3>
+            <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed">{{ 'OFFER.RENTAL.DESC' | translate }}</p>
+            <ul class="space-y-1.5 pt-1 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
+              <li class="flex items-center gap-2"><span class="text-cyan-600 dark:text-cyan-400 font-bold">✓</span> {{ 'OFFER.RENTAL.ITEM1' | translate }}</li>
+              <li class="flex items-center gap-2"><span class="text-cyan-600 dark:text-cyan-400 font-bold">✓</span> {{ 'OFFER.RENTAL.ITEM2' | translate }}</li>
+              <li class="flex items-center gap-2"><span class="text-cyan-600 dark:text-cyan-400 font-bold">✓</span> {{ 'OFFER.RENTAL.ITEM3' | translate }}</li>
             </ul>
           </div>
-          <a href="#" class="text-cyan-700 font-bold text-xs uppercase tracking-wider flex items-center gap-1 hover:text-cyan-800">
-            LEARN MORE <span>→</span>
-          </a>
         </div>
       </article>
 
@@ -128,82 +111,186 @@
   </div>
 </section>
 
+<!-- PRICING SECTION -->
+<section id="pricing" class="bg-slate-50 dark:bg-slate-950 py-10 md:py-20 px-4 sm:px-6 lg:px-8 border-t border-slate-100 dark:border-slate-800 transition-colors duration-300">
+  <div class="max-w-7xl mx-auto space-y-8 md:space-y-12">
+    <div class="text-center space-y-1">
+      <span class="text-cyan-600 dark:text-cyan-400 font-bold tracking-widest text-xs uppercase block">{{ 'PRICING.TAG' | translate }}</span>
+      <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">{{ 'PRICING.TITLE' | translate }}</h2>
+    </div>
 
-<!-- 3. NUEVA SECCIÓN DE PRECIOS: 4 TARJETAS PEQUEÑAS -->
-<section class="bg-slate-50 py-20 px-4 sm:px-6 lg:px-8 border-t border-slate-100">
-  <div class="max-w-7xl mx-auto space-y-12">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+      
+      <!-- 1. PRINCIPIANTE -->
+      <div class="bg-white dark:bg-slate-800 p-5 sm:p-6 rounded-2xl border border-slate-200/60 dark:border-slate-700 shadow-sm flex flex-col justify-between">
+        <div class="space-y-2">
+          <h3 class="font-extrabold text-slate-900 dark:text-white text-base sm:text-lg">{{ 'PRICING.BEGINNER.TITLE' | translate }}</h3>
+          <p class="text-slate-500 dark:text-slate-400 text-xs">{{ 'PRICING.BEGINNER.DESC' | translate }}</p>
+        </div>
+        <div class="border-t border-slate-100 dark:border-slate-700 pt-3 mt-4 flex items-baseline justify-between">
+          <span class="text-slate-400 text-xs font-medium">{{ 'PRICING.PER_PERSON' | translate }}</span>
+          <span class="text-xl sm:text-2xl font-black text-cyan-700 dark:text-cyan-400">350K</span>
+        </div>
+      </div>
+
+      <!-- 2. INTERMEDIO -->
+      <div class="bg-white dark:bg-slate-800 p-5 sm:p-6 rounded-2xl border-t-4 border-t-cyan-600 border-x border-b border-slate-200/60 dark:border-slate-700 shadow-md flex flex-col justify-between">
+        <div class="space-y-2">
+          <span class="text-cyan-600 dark:text-cyan-400 font-bold text-[10px] sm:text-xs uppercase tracking-wide">{{ 'PRICING.POPULAR' | translate }}</span>
+          <h3 class="font-extrabold text-slate-900 dark:text-white text-base sm:text-lg">{{ 'PRICING.INTERMEDIATE.TITLE' | translate }}</h3>
+          <p class="text-slate-500 dark:text-slate-400 text-xs">{{ 'PRICING.INTERMEDIATE.DESC' | translate }}</p>
+        </div>
+        <div class="border-t border-slate-100 dark:border-slate-700 pt-3 mt-4 flex items-baseline justify-between">
+          <span class="text-slate-400 text-xs font-medium">{{ 'PRICING.PER_PERSON' | translate }}</span>
+          <span class="text-xl sm:text-2xl font-black text-cyan-700 dark:text-cyan-400">550K</span>
+        </div>
+      </div>
+
+      <!-- 3. GRUPAL -->
+      <div class="bg-white dark:bg-slate-800 p-5 sm:p-6 rounded-2xl border border-slate-200/60 dark:border-slate-700 shadow-sm flex flex-col justify-between">
+        <div class="space-y-2">
+          <h3 class="font-extrabold text-slate-900 dark:text-white text-base sm:text-lg">{{ 'PRICING.GROUP.TITLE' | translate }}</h3>
+          <p class="text-slate-500 dark:text-slate-400 text-xs">{{ 'PRICING.GROUP.DESC' | translate }}</p>
+        </div>
+        <div class="border-t border-slate-100 dark:border-slate-700 pt-3 mt-4 flex items-baseline justify-between">
+          <span class="text-slate-400 text-xs font-medium">{{ 'PRICING.PER_PERSON' | translate }}</span>
+          <span class="text-xl sm:text-2xl font-black text-cyan-700 dark:text-cyan-400">250K</span>
+        </div>
+      </div>
+
+      <!-- 4. ALQUILER -->
+      <div class="bg-white dark:bg-slate-800 p-5 sm:p-6 rounded-2xl border border-slate-200/60 dark:border-slate-700 shadow-sm flex flex-col justify-between">
+        <div class="space-y-2">
+          <h3 class="font-extrabold text-slate-900 dark:text-white text-base sm:text-lg">{{ 'PRICING.RENTAL.TITLE' | translate }}</h3>
+          <p class="text-slate-500 dark:text-slate-400 text-xs">{{ 'PRICING.RENTAL.DESC' | translate }}</p>
+        </div>
+        <div class="border-t border-slate-100 dark:border-slate-700 pt-3 mt-4 flex items-baseline justify-between">
+          <span class="text-slate-400 text-xs font-medium">{{ 'PRICING.PER_DAY' | translate }}</span>
+          <span class="text-xl sm:text-2xl font-black text-cyan-700 dark:text-cyan-400">100K</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- RESTAURANTE Y COMIDA -->
+<section id="food" class="bg-white dark:bg-slate-900 py-10 md:py-16 px-4 sm:px-6 lg:px-8 transition-colors duration-300">
+  <div class="max-w-7xl mx-auto space-y-6 md:space-y-8">
     
-    <!-- Cabecera Precios -->
-    <div class="text-center mb-12 space-y-2">
-      <span class="text-cyan-600 font-bold tracking-widest text-xs uppercase block">PRICING PLANS</span>
-      <h2 class="text-3xl font-black text-slate-900">Affordable Surf Services</h2>
+    <div class="text-center space-y-1">
+      <span class="text-cyan-600 dark:text-cyan-400 font-bold tracking-widest text-xs uppercase block">RESTAURANTE & BEACH BAR</span>
+      <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">
+        {{ 'SERVICES.FOOD_TITLE' | translate }}
+      </h2>
+      <p class="text-slate-500 dark:text-slate-400 text-xs sm:text-sm max-w-xl mx-auto">
+        {{ 'SERVICES.FOOD_DESC' | translate }}
+      </p>
     </div>
 
-    <!-- Grid de 4 columnas en Desktop -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      
-      <!-- Tarjeta 1: Private Beginner -->
-      <div class="bg-white p-6 rounded-2xl border border-slate-200/60 shadow-sm flex flex-col justify-between transition-all hover:shadow-md">
-        <div class="space-y-3">
-          <div class="flex items-center gap-2 text-slate-700 font-bold text-sm">
-            <span>🏄‍♂️</span> Lessons
-          </div>
-          <h3 class="font-extrabold text-slate-900 text-lg leading-snug">Private Lesson (Beginner)</h3>
-          <p class="text-slate-500 text-xs leading-relaxed">2 hours at the beach break. Includes dedicated certified instructor and all necessary gear.</p>
-        </div>
-        <div class="border-t border-slate-100 pt-4 mt-6 flex items-baseline justify-between">
-          <span class="text-slate-400 text-xs font-medium">Per person</span>
-          <span class="text-2xl font-black text-cyan-700">350K</span>
-        </div>
+    <!-- Carrusel táctil en móvil / Grid en Escritorio -->
+    <div class="flex overflow-x-auto gap-4 snap-x snap-mandatory md:grid md:grid-cols-3 md:gap-6 pb-2 md:pb-0 scrollbar-none">
+      <div class="min-w-[80%] sm:min-w-0 snap-center h-48 sm:h-64 rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200/60 dark:border-slate-800 shadow-sm flex-shrink-0 md:flex-shrink">
+        <img src="images/comida.jpg" alt="Local Food 1" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
       </div>
-
-      <!-- Tarjeta 2: Private Intermediate (Destacada con borde superior de color) -->
-      <div class="bg-white p-6 rounded-2xl border-t-4 border-t-cyan-600 border-x border-b border-slate-200/60 shadow-md flex flex-col justify-between transition-all hover:shadow-lg">
-        <div class="space-y-3">
-          <div class="flex items-center gap-2 text-cyan-600 font-bold text-sm">
-            <span>🏄‍♂️</span> Most Popular
-          </div>
-          <h3 class="font-extrabold text-slate-900 text-lg leading-snug">Private Lesson (Intermediate)</h3>
-          <p class="text-slate-500 text-xs leading-relaxed">Catch green waves outside with a pro instructor guiding you through the lineup and positioning.</p>
-        </div>
-        <div class="border-t border-slate-100 pt-4 mt-6 flex items-baseline justify-between">
-          <span class="text-slate-400 text-xs font-medium">Per person</span>
-          <span class="text-2xl font-black text-cyan-700">550K</span>
-        </div>
+      <div class="min-w-[80%] sm:min-w-0 snap-center h-48 sm:h-64 rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200/60 dark:border-slate-800 shadow-sm flex-shrink-0 md:flex-shrink">
+        <img src="images/comida2.jpg" alt="Local Food 2" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
       </div>
-
-      <!-- Tarjeta 3: Group Beginners -->
-      <div class="bg-white p-6 rounded-2xl border border-slate-200/60 shadow-sm flex flex-col justify-between transition-all hover:shadow-md">
-        <div class="space-y-3">
-          <div class="flex items-center gap-2 text-slate-700 font-bold text-sm">
-            <span>👥</span> Groups
-          </div>
-          <h3 class="font-extrabold text-slate-900 text-lg leading-snug">Group Lesson (Beginners)</h3>
-          <p class="text-slate-500 text-xs leading-relaxed">Max 5 people per group. 2 hours of pure fun with 3 instructors ensuring safety and individual focus.</p>
-        </div>
-        <div class="border-t border-slate-100 pt-4 mt-6 flex items-baseline justify-between">
-          <span class="text-slate-400 text-xs font-medium">Per person</span>
-          <span class="text-2xl font-black text-cyan-700">250K</span>
-        </div>
+      <div class="min-w-[80%] sm:min-w-0 snap-center h-48 sm:h-64 rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200/60 dark:border-slate-800 shadow-sm flex-shrink-0 md:flex-shrink">
+        <img src="images/comida3.jpg" alt="Local Food 3" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
       </div>
-
-      <!-- Tarjeta 4: Full Day Rental (Estilo Discontinuo de la captura) -->
-      <div class="bg-white p-6 rounded-2xl border-2 border-dashed border-slate-200 shadow-sm flex flex-col justify-between transition-all hover:shadow-md">
-        <div class="space-y-3">
-          <div class="flex items-center gap-2 text-slate-700 font-bold text-sm">
-            <span>🛹</span> Rental
-          </div>
-          <h3 class="font-extrabold text-slate-900 text-lg leading-snug">Full Day Board Rental</h3>
-          <p class="text-slate-500 text-xs leading-relaxed">Premium fleet (Soft, Fun, or Longboards). Includes wax, leash and lycra to surf at your own pace.</p>
-        </div>
-        <div class="border-t border-slate-100 pt-4 mt-6 flex items-baseline justify-between">
-          <span class="text-slate-400 text-xs font-medium">Per day</span>
-          <span class="text-2xl font-black text-cyan-700">100K</span>
-        </div>
-      </div>
-
     </div>
+
   </div>
 </section>
 
-<app-footer></app-footer>
+<!-- TRANSPORTE & TAXI -->
+<section id="transport" class="bg-slate-50 dark:bg-slate-950 py-10 md:py-16 px-4 sm:px-6 lg:px-8 border-t border-slate-100 dark:border-slate-800 transition-colors duration-300">
+  <div class="max-w-4xl mx-auto">
+    <article class="bg-white dark:bg-slate-900 rounded-2xl sm:rounded-3xl border border-slate-200/60 dark:border-slate-800 shadow-sm overflow-hidden grid grid-cols-1 md:grid-cols-2">
+      <div class="h-48 md:h-full relative">
+        <img src="images/surf-van.jpg" alt="Surf Taxi Lombok" class="w-full h-full object-cover">
+      </div>
+      <div class="p-5 sm:p-8 flex flex-col justify-between space-y-4 sm:space-y-6">
+        <div class="space-y-2">
+          <span class="text-cyan-600 dark:text-cyan-400 font-bold text-[10px] sm:text-xs uppercase tracking-wider block">Servicio Oficial</span>
+          <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+            <span>🚕</span> {{ 'SERVICES.TRANSPORT_TITLE' | translate }}
+          </h3>
+          <p class="text-slate-600 dark:text-slate-400 text-xs sm:text-sm leading-relaxed">
+            {{ 'SERVICES.TRANSPORT_DESC' | translate }}
+          </p>
+        </div>
+        
+        <a href="https://wa.me/6281918110376?text={{ 'WHATSAPP.BOOK_TAXI' | translate }}" 
+           target="_blank" 
+           class="w-full bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-3 px-5 rounded-xl sm:rounded-2xl text-xs sm:text-sm flex items-center justify-center gap-2 transition-all shadow-md active:scale-95">
+          <span>💬 {{ 'SERVICES.TRANSPORT_TITLE' | translate }} (WhatsApp)</span>
+        </a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- SECCIÓN DIRECCIÓN Y MAPA -->
+<section id="location" class="bg-white dark:bg-slate-900 py-10 md:py-20 px-4 sm:px-6 lg:px-8 border-t border-slate-100 dark:border-slate-800 transition-colors duration-300">
+  <div class="max-w-7xl mx-auto space-y-8 md:space-y-12">
+    <div class="text-center space-y-1">
+      <span class="text-cyan-600 dark:text-cyan-400 font-bold tracking-widest text-xs uppercase block">
+        {{ 'LOCATION_SEC.TAG' | translate }}
+      </span>
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 dark:text-white">
+        {{ 'LOCATION_SEC.TITLE' | translate }}
+      </h2>
+      <p class="text-slate-500 dark:text-slate-400 text-xs sm:text-sm max-w-xl mx-auto">
+        {{ 'LOCATION_SEC.DESC' | translate }}
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-start">
+      <!-- Tarjeta de Información de Contacto -->
+      <div class="bg-slate-50 dark:bg-slate-800 p-5 sm:p-8 rounded-2xl sm:rounded-3xl border border-slate-200/60 dark:border-slate-700 space-y-4 sm:space-y-6">
+        <div class="space-y-1">
+          <div class="flex items-center gap-2 text-cyan-600 dark:text-cyan-400 font-bold text-sm sm:text-base">
+            <span>📍</span>
+            <h3>{{ 'LOCATION_SEC.ADDRESS_TITLE' | translate }}</h3>
+          </div>
+          <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed pl-6">
+            {{ 'LOCATION_SEC.ADDRESS_TEXT' | translate }}
+          </p>
+        </div>
+
+        <div class="space-y-1 border-t border-slate-200/60 dark:border-slate-700 pt-4">
+          <div class="flex items-center gap-2 text-cyan-600 dark:text-cyan-400 font-bold text-sm sm:text-base">
+            <span>⏰</span>
+            <h3>{{ 'LOCATION_SEC.HOURS_TITLE' | translate }}</h3>
+          </div>
+          <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed pl-6">
+            {{ 'LOCATION_SEC.HOURS_TEXT' | translate }}
+          </p>
+        </div>
+      </div>
+
+      <!-- Mapa Integrado (Google Maps) -->
+      <div class="lg:col-span-2 h-[260px] sm:h-[350px] rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200/60 dark:border-slate-700 shadow-sm">
+        <iframe 
+          title="Jofan Surf School Location"
+          class="w-full h-full border-0"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3942.846569107936!2d116.16109967590821!3d-8.868770791191062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dc2f4005b63795b%3A0x6b1626fdd01ae6b4!2sSelong%20Belanak%20Beach!5e0!3m2!1sen!2ses!4v1700000000000!5m2!1sen!2ses" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <!-- Botón flotante WhatsApp -->
+      <a href="https://wa.me/6281918110376?text={{ 'WHATSAPP.BOOK_LESSON' | translate }}" 
+         target="_blank" 
+         class="fixed bottom-5 right-5 z-50 bg-emerald-500 text-white p-3.5 sm:p-4 rounded-full shadow-2xl hover:bg-emerald-600 hover:scale-110 transition-all flex items-center justify-center">
+        <svg class="w-6 h-6 sm:w-7 sm:h-7 fill-current" viewBox="0 0 24 24">
+          <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.205 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>

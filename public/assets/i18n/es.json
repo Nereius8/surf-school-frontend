@@ -1,0 +1,113 @@
+{
+    "NAVBAR": {
+      "HOME": "Inicio",
+      "LESSONS": "Clases de Surf",
+      "RENTAL": "Alquiler de Tablas",
+      "TRANSPORT": "Transporte",
+      "LOCATION": "Ubicación",
+      "FOOD": "Comida y Bar",
+      "BOOK_NOW": "RESERVAR"
+    }
+  ,
+    "WELCOME": "Bienvenido a nuestra tienda de tablas de surf",
+    "transport": {
+        "subtitle": "SERVICIOS ADICIONALES",
+        "title": "Explora Lombok con nosotros",
+        "cardTitle": "Servicio de conductor privado y taxi",
+        "cardDescription": "¿Necesitas un traslado desde el aeropuerto o quieres descubrir los mejores lugares alrededor de Lombok? Te tenemos cubierto. Reserva un <strong class='text-slate-900 dark:text-white font-semibold'>conductor privado local confiable</strong> directamente a través de nosotros para viajes seguros, traslados al hotel y tours por la isla a tarifas locales justas.",
+        "feature1": "Recogidas en el aeropuerto",
+        "feature2": "Tours de día completo",
+        "feature3": "Traslados al hotel",
+        "button": "Reserva un viaje",
+        "buttonHint": "Contacto directo vía WhatsApp"
+    }
+    , 
+    "HERO": {
+    "SUBTITLE": "ESCUELA DE SURF JOFAN",
+    "TITLE_1": "Aprende a surfear",
+  "TITLE_2": "y vive el océano",
+  "DESC": "Clases de surf para todos los niveles en un ambiente seguro, divertido y profesional."
+  },
+  "OFFER": {
+    "TAG": "LO QUE OFRECEMOS",
+    "TITLE": "Clases de surf y alquiler de tablas",
+    "BEGINNER": {
+      "TITLE": "Clases de Iniciación",
+      "DESC": "Aprende a surfear desde cero en un entorno seguro y divertido.",
+      "ITEM1": "Instructores certificados",
+      "ITEM2": "Equipamiento incluido",
+      "ITEM3": "Grupos reducidos"
+    },
+    "INTERMEDIATE": {
+      "TITLE": "Clases Intermedias",
+      "DESC": "Mejora tu técnica y lleva tu surf al siguiente nivel con nosotros.",
+      "ITEM1": "Análisis de técnica",
+      "ITEM2": "Feedback personalizado",
+      "ITEM3": "Sesiones adaptadas a tu nivel"
+    },
+    "RENTAL": {
+      "TITLE": "Alquiler de Tablas",
+      "DESC": "Alquila la tabla perfecta para tu nivel y disfruta a tu propio ritmo.",
+      "ITEM1": "Tablas para todos los niveles",
+      "ITEM2": "Shortboards y Longboards",
+      "ITEM3": "Material bien mantenido"
+    },
+    "MORE": "MÁS INFORMACIÓN"
+  },
+  "PRICING": {
+   "TAG": "PRECIOS Y PLANES",
+    "TITLE": "Tarifas Claras Sin Sorpresas",
+    "POPULAR": "MÁS POPULAR",
+    "PER_PERSON": "por persona",
+    "PER_DAY": "por día",
+    "BEGINNER": {
+      "TITLE": "Clase Privada (Principiante)",
+      "DESC": "2 horas en la orilla con instructor y equipo completo."
+    },
+    "INTERMEDIATE": {
+      "TITLE": "Clase Privada (Intermedio)",
+      "DESC": "Coaching profesional para coger olas en el pico."
+    },
+    "GROUP": {
+      "TITLE": "Clase Grupal",
+      "DESC": "Máximo 5 personas. 2 horas de aprendizaje seguro y divertido."
+    },
+    "RENTAL": {
+      "TITLE": "Alquiler de Tabla",
+      "DESC": "Alquiler todo el día con invento y parafina incluidos."
+    }
+  },
+  "LOCATION_SEC": {
+    "TAG": "VISÍTANOS",
+    "TITLE": "Dónde encontrarnos",
+    "DESC": "Estamos ubicados en la misma playa, junto a las mejores olas y nuestro restaurante.",
+    "ADDRESS_TITLE": "Dirección",
+    "ADDRESS_TEXT": "Playa Selong Belanak, Lombok, Indonesia",
+    "HOURS_TITLE": "Horario de atención",
+    "HOURS_TEXT": "Lunes - Domingo: 7:00 AM - 6:00 PM"
+  },
+  "SERVICES": {
+  "TRANSPORT_TITLE": "Transporte y Taxi Aeropuerto",
+  "TRANSPORT_DESC": "Te recogemos en cualquier punto de Lombok. Traslados cómodos y seguros.",
+  "FOOD_TITLE": "Bar de Playa y Comida",
+  "FOOD_DESC": "Platos locales frescos y bebidas frías justo después de tu sesión de surf."
+},
+"WHATSAPP": {
+  "BOOK_LESSON": "¡Hola! Quisiera reservar una clase de surf.",
+  "BOOK_RENTAL": "¡Hola! Quisiera alquilar una tabla de surf.",
+  "BOOK_TAXI": "¡Hola! Necesito servicio de transporte/taxi en Lombok."
+},
+"CONTACT": {
+  "TITLE": "Reservas e Información Directa",
+  "DESC": "Llámanos o escríbenos por WhatsApp para consultar disponibilidad inmediata o resolver cualquier duda.",
+  "PHONE_LABEL": "Teléfono / WhatsApp",
+  "CALL_NOW": "Llamar / Enviar WhatsApp"
+},
+"FOOD_SEC": {
+  "TITLE": "Restaurante de Playa y Comida",
+  "DESC": "Disfruta de platos locales frescos, frutas tropicales y cocos fríos justo al salir de tu sesión de surf."
+}
+
+}
+  
+  
