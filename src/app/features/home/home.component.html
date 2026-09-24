@@ -54,60 +54,103 @@
     <div class="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8">
       
       <!-- Beginner -->
-      <article class="bg-white/85 dark:bg-slate-950/85 backdrop-blur-md rounded-2xl sm:rounded-3xl border border-slate-200/60 dark:border-slate-800/80 shadow-lg overflow-hidden flex flex-col justify-between transition-all">
-        <div class="h-44 sm:h-52 bg-slate-100 dark:bg-slate-800 relative m-2 rounded-xl sm:rounded-2xl overflow-hidden">
-          <img src="images/principiantes.jpg" alt="Beginner Surf Lessons" class="w-full h-full object-cover">
-        </div>
-        <div class="p-5 sm:p-8 flex-1 flex flex-col justify-between space-y-4 sm:space-y-6">
-          <div class="space-y-2 sm:space-y-3">
-            <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">{{ 'OFFER.BEGINNER.TITLE' | translate }}</h3>
-            <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed">{{ 'OFFER.BEGINNER.DESC' | translate }}</p>
-            <ul class="space-y-1.5 pt-1 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
-              <li class="flex items-center gap-2"><span class="text-cyan-600 dark:text-cyan-400 font-bold">✓</span> {{ 'OFFER.BEGINNER.ITEM1' | translate }}</li>
-              <li class="flex items-center gap-2"><span class="text-cyan-600 dark:text-cyan-400 font-bold">✓</span> {{ 'OFFER.BEGINNER.ITEM2' | translate }}</li>
-              <li class="flex items-center gap-2"><span class="text-cyan-600 dark:text-cyan-400 font-bold">✓</span> {{ 'OFFER.BEGINNER.ITEM3' | translate }}</li>
-            </ul>
-          </div>
-        </div>
-      </article>
+<article class="bg-white/85 dark:bg-slate-950/85 backdrop-blur-md rounded-2xl sm:rounded-3xl border border-slate-200/60 dark:border-slate-800/80 shadow-lg overflow-hidden flex flex-col justify-between transition-all">
+  <div class="h-44 sm:h-52 bg-slate-100 dark:bg-slate-800 relative m-2 rounded-xl sm:rounded-2xl overflow-hidden">
+    <img src="images/principiantes.jpg" alt="Beginner Surf Lessons" class="w-full h-full object-cover">
+  </div>
+  <div class="p-5 sm:p-8 flex-1 flex flex-col justify-between space-y-4 sm:space-y-6">
+    <div class="space-y-3">
+      
+      <!-- Fila superior: Título a la izquierda y Botón de reserva compacto a la derecha -->
+      <div class="flex items-start justify-between gap-3">
+        <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white leading-tight">
+          {{ 'OFFER.BEGINNER.TITLE' | translate }}
+        </h3>
+        <!-- Botón compacto para reservar -->
+        <a href="https://wa.me/6281918110376?text={{ 'WHATSAPP.BOOK_BEGINNER' | translate }}" 
+           target="_blank" 
+           title="Book via WhatsApp"
+           class="shrink-0 inline-flex items-center gap-1.5 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-black px-3 py-1.5 rounded-xl text-xs uppercase tracking-wider transition-all shadow-md active:scale-95">
+          <span>BOOK 🏄</span>
+        </a>
+      </div>
 
-      <!-- Intermediate -->
-      <article class="bg-white/85 dark:bg-slate-950/85 backdrop-blur-md rounded-2xl sm:rounded-3xl border border-slate-200/60 dark:border-slate-800/80 shadow-lg overflow-hidden flex flex-col justify-between transition-all">
-        <div class="h-44 sm:h-52 bg-slate-100 dark:bg-slate-800 relative m-2 rounded-xl sm:rounded-2xl overflow-hidden">
-          <img src="images/intermedio.jpg" alt="Intermediate Surf Lessons" class="w-full h-full object-cover">
-        </div>
-        <div class="p-5 sm:p-8 flex-1 flex flex-col justify-between space-y-4 sm:space-y-6">
-          <div class="space-y-2 sm:space-y-3">
-            <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">{{ 'OFFER.INTERMEDIATE.TITLE' | translate }}</h3>
-            <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed">{{ 'OFFER.INTERMEDIATE.DESC' | translate }}</p>
-            <ul class="space-y-1.5 pt-1 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
-              <li class="flex items-center gap-2"><span class="text-cyan-600 dark:text-cyan-400 font-bold">✓</span> {{ 'OFFER.INTERMEDIATE.ITEM1' | translate }}</li>
-              <li class="flex items-center gap-2"><span class="text-cyan-600 dark:text-cyan-400 font-bold">✓</span> {{ 'OFFER.INTERMEDIATE.ITEM2' | translate }}</li>
-              <li class="flex items-center gap-2"><span class="text-cyan-600 dark:text-cyan-400 font-bold">✓</span> {{ 'OFFER.INTERMEDIATE.ITEM3' | translate }}</li>
-            </ul>
-          </div>
-        </div>
-      </article>
-
-      <!-- Rental -->
-      <article id="rental" class="bg-white/85 dark:bg-slate-950/85 backdrop-blur-md rounded-2xl sm:rounded-3xl border border-slate-200/60 dark:border-slate-800/80 shadow-lg overflow-hidden flex flex-col justify-between transition-all">
-        <div class="h-44 sm:h-52 bg-slate-100 dark:bg-slate-800 relative m-2 rounded-xl sm:rounded-2xl overflow-hidden">
-          <img src="images/tablas.jpg" alt="Surfboard Rental" class="w-full h-full object-cover">
-        </div>
-        <div class="p-5 sm:p-8 flex-1 flex flex-col justify-between space-y-4 sm:space-y-6">
-          <div class="space-y-2 sm:space-y-3">
-            <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">{{ 'OFFER.RENTAL.TITLE' | translate }}</h3>
-            <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed">{{ 'OFFER.RENTAL.DESC' | translate }}</p>
-            <ul class="space-y-1.5 pt-1 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
-              <li class="flex items-center gap-2"><span class="text-cyan-600 dark:text-cyan-400 font-bold">✓</span> {{ 'OFFER.RENTAL.ITEM1' | translate }}</li>
-              <li class="flex items-center gap-2"><span class="text-cyan-600 dark:text-cyan-400 font-bold">✓</span> {{ 'OFFER.RENTAL.ITEM2' | translate }}</li>
-              <li class="flex items-center gap-2"><span class="text-cyan-600 dark:text-cyan-400 font-bold">✓</span> {{ 'OFFER.RENTAL.ITEM3' | translate }}</li>
-            </ul>
-          </div>
-        </div>
-      </article>
-
+      <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed">{{ 'OFFER.BEGINNER.DESC' | translate }}</p>
+      
+      <ul class="space-y-1.5 pt-1 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
+        <li class="flex items-center gap-2"><span class="text-cyan-600 dark:text-cyan-400 font-bold">✓</span> {{ 'OFFER.BEGINNER.ITEM1' | translate }}</li>
+        <li class="flex items-center gap-2"><span class="text-cyan-600 dark:text-cyan-400 font-bold">✓</span> {{ 'OFFER.BEGINNER.ITEM2' | translate }}</li>
+        <li class="flex items-center gap-2"><span class="text-cyan-600 dark:text-cyan-400 font-bold">✓</span> {{ 'OFFER.BEGINNER.ITEM3' | translate }}</li>
+      </ul>
     </div>
+  </div>
+</article>
+
+    <!-- Intermediate -->
+  <article class="bg-white/85 dark:bg-slate-950/85 backdrop-blur-md rounded-2xl sm:rounded-3xl border border-slate-200/60 dark:border-slate-800/80 shadow-lg overflow-hidden flex flex-col justify-between transition-all">
+    <div class="h-44 sm:h-52 bg-slate-100 dark:bg-slate-800 relative m-2 rounded-xl sm:rounded-2xl overflow-hidden">
+      <img src="images/intermedio.jpg" alt="Intermediate Surf Lessons" class="w-full h-full object-cover">
+    </div>
+    <div class="p-5 sm:p-8 flex-1 flex flex-col justify-between space-y-4 sm:space-y-6">
+      <div class="space-y-3">
+        
+        <!-- Fila superior: Título y Botón compacto -->
+        <div class="flex items-start justify-between gap-3">
+          <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white leading-tight">
+            {{ 'OFFER.INTERMEDIATE.TITLE' | translate }}
+          </h3>
+          <a href="https://wa.me/6281918110376?text={{ 'WHATSAPP.BOOK_INTERMEDIATE' | translate }}" 
+             target="_blank" 
+             title="Book via WhatsApp"
+             class="shrink-0 inline-flex items-center gap-1.5 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-black px-3.5 py-1.5 rounded-xl text-xs uppercase tracking-wider transition-all shadow-md active:scale-95">
+            <span>BOOK ⚡</span>
+          </a>
+        </div>
+
+        <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed">{{ 'OFFER.INTERMEDIATE.DESC' | translate }}</p>
+        
+        <ul class="space-y-1.5 pt-1 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
+          <li class="flex items-center gap-2"><span class="text-cyan-600 dark:text-cyan-400 font-bold">✓</span> {{ 'OFFER.INTERMEDIATE.ITEM1' | translate }}</li>
+          <li class="flex items-center gap-2"><span class="text-cyan-600 dark:text-cyan-400 font-bold">✓</span> {{ 'OFFER.INTERMEDIATE.ITEM2' | translate }}</li>
+          <li class="flex items-center gap-2"><span class="text-cyan-600 dark:text-cyan-400 font-bold">✓</span> {{ 'OFFER.INTERMEDIATE.ITEM3' | translate }}</li>
+        </ul>
+      </div>
+    </div>
+  </article>
+
+  <!-- Rental -->
+  <article id="rental" class="bg-white/85 dark:bg-slate-950/85 backdrop-blur-md rounded-2xl sm:rounded-3xl border border-slate-200/60 dark:border-slate-800/80 shadow-lg overflow-hidden flex flex-col justify-between transition-all">
+    <div class="h-44 sm:h-52 bg-slate-100 dark:bg-slate-800 relative m-2 rounded-xl sm:rounded-2xl overflow-hidden">
+      <img src="images/tablas.jpg" alt="Surfboard Rental" class="w-full h-full object-cover">
+    </div>
+    <div class="p-5 sm:p-8 flex-1 flex flex-col justify-between space-y-4 sm:space-y-6">
+      <div class="space-y-3">
+        
+        <!-- Fila superior: Título y Botón compacto -->
+        <div class="flex items-start justify-between gap-3">
+          <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white leading-tight">
+            {{ 'OFFER.RENTAL.TITLE' | translate }}
+          </h3>
+          <a href="https://wa.me/6281918110376?text={{ 'WHATSAPP.RENT_BOARD' | translate }}" 
+             target="_blank" 
+             title="Book via WhatsApp"
+             class="shrink-0 inline-flex items-center gap-1.5 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-black px-3.5 py-1.5 rounded-xl text-xs uppercase tracking-wider transition-all shadow-md active:scale-95">
+            <span>RENT 🌊</span>
+          </a>
+        </div>
+
+        <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed">{{ 'OFFER.RENTAL.DESC' | translate }}</p>
+        
+        <ul class="space-y-1.5 pt-1 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
+          <li class="flex items-center gap-2"><span class="text-cyan-600 dark:text-cyan-400 font-bold">✓</span> {{ 'OFFER.RENTAL.ITEM1' | translate }}</li>
+          <li class="flex items-center gap-2"><span class="text-cyan-600 dark:text-cyan-400 font-bold">✓</span> {{ 'OFFER.RENTAL.ITEM2' | translate }}</li>
+          <li class="flex items-center gap-2"><span class="text-cyan-600 dark:text-cyan-400 font-bold">✓</span> {{ 'OFFER.RENTAL.ITEM3' | translate }}</li>
+        </ul>
+      </div>
+    </div>
+  </article>
+
+</div> 
   </div>
 </section>
 

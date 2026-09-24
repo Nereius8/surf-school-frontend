@@ -26,7 +26,7 @@
   body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--jovan-bg);
+   
     color: var(--jovan-text-main);
     -webkit-font-smoothing: antialiased;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -43,11 +43,12 @@
   /* Estilo base para el fondo con imagen difuminada */
 .bg-surf-pattern {
   /* Por defecto: modo luz */
+  min-height: 100vh;
   background-image: 
     /* Capa 1: Degradado blanco semitransparente para aclarar la imagen y asegurar lectura */
     linear-gradient(to bottom, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.75)),
     /* Capa 2: Tu imagen de fondo */
-    url('/images/fondo-mar.jpg');
+    url('/images/fondo-olas.jpg');
   
   background-size: cover;
   background-position: center;
@@ -58,10 +59,11 @@
 /* Estilo para el modo noche (dark mode) */
 /* Tailwind añade la clase 'dark' al body cuando está activo */
 .dark .bg-surf-pattern {
+  min-height: 100vh;
   background-image: 
     /* Capa 1: Degradado negro semitransparente para oscurecer la imagen */
     linear-gradient(to bottom, rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.85)),
-    url('/images/fondo-mar.jpg');
+    url('/images/fondo-olas.jpg');
     background-attachment: scroll;
   
   /* Nota: rgba(15, 23, 42, ...) es el color bg-slate-900 que ya usas en modo oscuro */
