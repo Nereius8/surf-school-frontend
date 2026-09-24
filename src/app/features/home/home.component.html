@@ -1,9 +1,9 @@
 <!-- HERO SECTION COMPACTO Y MODERNO -->
-<main id="hero" class="bg-slate-100 dark:bg-slate-950 py-8 md:py-12 px-4 sm:px-6 lg:px-8 border-b border-slate-200 dark:border-slate-800 transition-colors duration-300">
+<main id="hero" class="py-8 md:py-12 px-4 sm:px-6 lg:px-8 transition-colors duration-300">
   <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
     
-    <!-- Texto a la izquierda (5 columnas) -->
-    <div class="lg:col-span-5 text-center lg:text-left space-y-3">
+    <!-- Texto a la izquierda (5 columnas) con fondo translúcido para legibilidad -->
+    <div class="lg:col-span-5 text-center lg:text-left space-y-3 bg-white/85 dark:bg-slate-950/85 backdrop-blur-md p-6 sm:p-8 rounded-3xl border border-slate-200/60 dark:border-slate-800/80 shadow-lg">
       <span class="text-cyan-600 dark:text-cyan-400 font-extrabold tracking-wider text-[11px] sm:text-xs uppercase block">
         {{ 'HERO.SUBTITLE' | translate }}
       </span>
@@ -30,8 +30,8 @@
 
     <!-- Foto en Card contenida a la derecha (7 columnas) -->
     <div class="lg:col-span-7 flex justify-center">
-      <div class="relative w-full max-w-lg h-[260px] sm:h-[380px] lg:h-[420px] rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-2xl bg-slate-200 dark:bg-slate-800">
-        <img src="images/lombok.jpg" alt="Jofan Surf School Team" class="w-full h-full object-cover object-center">
+      <div class="relative w-full max-w-lg h-[260px] sm:h-[380px] lg:h-[420px] rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200/60 dark:border-slate-800/80 shadow-2xl bg-white/85 dark:bg-slate-950/85 backdrop-blur-md p-2">
+        <img src="images/lombok.jpg" alt="Jofan Surf School Team" class="w-full h-full object-cover object-center rounded-xl sm:rounded-2xl">
       </div>
     </div>
 
@@ -39,7 +39,7 @@
 </main>
 
 <!-- LESSONS & RENTAL SECTION -->
-<section id="lessons" class="bg-white dark:bg-slate-900 py-10 md:py-20 px-4 sm:px-6 lg:px-8 transition-colors duration-300">
+<section id="lessons" class="py-10 md:py-20 px-4 sm:px-6 lg:px-8 transition-colors duration-300">
   <div class="max-w-7xl mx-auto">
     <div class="text-center mb-8 md:mb-16 space-y-1">
       <span class="text-cyan-600 dark:text-cyan-400 font-bold tracking-widest text-xs uppercase block">
@@ -54,8 +54,8 @@
     <div class="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8">
       
       <!-- Beginner -->
-      <article class="bg-slate-50 dark:bg-slate-800 rounded-2xl sm:rounded-3xl border border-slate-200/60 dark:border-slate-700 shadow-sm overflow-hidden flex flex-col justify-between transition-all">
-        <div class="h-44 sm:h-52 bg-slate-100 dark:bg-slate-700 relative">
+      <article class="bg-white/85 dark:bg-slate-950/85 backdrop-blur-md rounded-2xl sm:rounded-3xl border border-slate-200/60 dark:border-slate-800/80 shadow-lg overflow-hidden flex flex-col justify-between transition-all">
+        <div class="h-44 sm:h-52 bg-slate-100 dark:bg-slate-800 relative m-2 rounded-xl sm:rounded-2xl overflow-hidden">
           <img src="images/principiantes.jpg" alt="Beginner Surf Lessons" class="w-full h-full object-cover">
         </div>
         <div class="p-5 sm:p-8 flex-1 flex flex-col justify-between space-y-4 sm:space-y-6">
@@ -72,8 +72,8 @@
       </article>
 
       <!-- Intermediate -->
-      <article class="bg-slate-50 dark:bg-slate-800 rounded-2xl sm:rounded-3xl border border-slate-200/60 dark:border-slate-700 shadow-sm overflow-hidden flex flex-col justify-between transition-all">
-        <div class="h-44 sm:h-52 bg-slate-100 dark:bg-slate-700 relative">
+      <article class="bg-white/85 dark:bg-slate-950/85 backdrop-blur-md rounded-2xl sm:rounded-3xl border border-slate-200/60 dark:border-slate-800/80 shadow-lg overflow-hidden flex flex-col justify-between transition-all">
+        <div class="h-44 sm:h-52 bg-slate-100 dark:bg-slate-800 relative m-2 rounded-xl sm:rounded-2xl overflow-hidden">
           <img src="images/intermedio.jpg" alt="Intermediate Surf Lessons" class="w-full h-full object-cover">
         </div>
         <div class="p-5 sm:p-8 flex-1 flex flex-col justify-between space-y-4 sm:space-y-6">
@@ -90,8 +90,8 @@
       </article>
 
       <!-- Rental -->
-      <article id="rental" class="bg-slate-50 dark:bg-slate-800 rounded-2xl sm:rounded-3xl border border-slate-200/60 dark:border-slate-700 shadow-sm overflow-hidden flex flex-col justify-between transition-all">
-        <div class="h-44 sm:h-52 bg-slate-100 dark:bg-slate-700 relative">
+      <article id="rental" class="bg-white/85 dark:bg-slate-950/85 backdrop-blur-md rounded-2xl sm:rounded-3xl border border-slate-200/60 dark:border-slate-800/80 shadow-lg overflow-hidden flex flex-col justify-between transition-all">
+        <div class="h-44 sm:h-52 bg-slate-100 dark:bg-slate-800 relative m-2 rounded-xl sm:rounded-2xl overflow-hidden">
           <img src="images/tablas.jpg" alt="Surfboard Rental" class="w-full h-full object-cover">
         </div>
         <div class="p-5 sm:p-8 flex-1 flex flex-col justify-between space-y-4 sm:space-y-6">
@@ -112,7 +112,7 @@
 </section>
 
 <!-- PRICING SECTION -->
-<section id="pricing" class="bg-slate-50 dark:bg-slate-950 py-10 md:py-20 px-4 sm:px-6 lg:px-8 border-t border-slate-100 dark:border-slate-800 transition-colors duration-300">
+<section id="pricing" class="py-10 md:py-20 px-4 sm:px-6 lg:px-8 transition-colors duration-300">
   <div class="max-w-7xl mx-auto space-y-8 md:space-y-12">
     <div class="text-center space-y-1">
       <span class="text-cyan-600 dark:text-cyan-400 font-bold tracking-widest text-xs uppercase block">{{ 'PRICING.TAG' | translate }}</span>
@@ -122,49 +122,49 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
       
       <!-- 1. PRINCIPIANTE -->
-      <div class="bg-white dark:bg-slate-800 p-5 sm:p-6 rounded-2xl border border-slate-200/60 dark:border-slate-700 shadow-sm flex flex-col justify-between">
+      <div class="bg-white/85 dark:bg-slate-950/85 backdrop-blur-md p-5 sm:p-6 rounded-2xl border border-slate-200/60 dark:border-slate-800/80 shadow-lg flex flex-col justify-between">
         <div class="space-y-2">
           <h3 class="font-extrabold text-slate-900 dark:text-white text-base sm:text-lg">{{ 'PRICING.BEGINNER.TITLE' | translate }}</h3>
           <p class="text-slate-500 dark:text-slate-400 text-xs">{{ 'PRICING.BEGINNER.DESC' | translate }}</p>
         </div>
-        <div class="border-t border-slate-100 dark:border-slate-700 pt-3 mt-4 flex items-baseline justify-between">
+        <div class="border-t border-slate-200/60 dark:border-slate-800 pt-3 mt-4 flex items-baseline justify-between">
           <span class="text-slate-400 text-xs font-medium">{{ 'PRICING.PER_PERSON' | translate }}</span>
           <span class="text-xl sm:text-2xl font-black text-cyan-700 dark:text-cyan-400">350K</span>
         </div>
       </div>
 
       <!-- 2. INTERMEDIO -->
-      <div class="bg-white dark:bg-slate-800 p-5 sm:p-6 rounded-2xl border-t-4 border-t-cyan-600 border-x border-b border-slate-200/60 dark:border-slate-700 shadow-md flex flex-col justify-between">
+      <div class="bg-white/85 dark:bg-slate-950/85 backdrop-blur-md p-5 sm:p-6 rounded-2xl border-t-4 border-t-cyan-600 border-x border-b border-slate-200/60 dark:border-slate-800/80 shadow-lg flex flex-col justify-between">
         <div class="space-y-2">
           <span class="text-cyan-600 dark:text-cyan-400 font-bold text-[10px] sm:text-xs uppercase tracking-wide">{{ 'PRICING.POPULAR' | translate }}</span>
           <h3 class="font-extrabold text-slate-900 dark:text-white text-base sm:text-lg">{{ 'PRICING.INTERMEDIATE.TITLE' | translate }}</h3>
           <p class="text-slate-500 dark:text-slate-400 text-xs">{{ 'PRICING.INTERMEDIATE.DESC' | translate }}</p>
         </div>
-        <div class="border-t border-slate-100 dark:border-slate-700 pt-3 mt-4 flex items-baseline justify-between">
+        <div class="border-t border-slate-200/60 dark:border-slate-800 pt-3 mt-4 flex items-baseline justify-between">
           <span class="text-slate-400 text-xs font-medium">{{ 'PRICING.PER_PERSON' | translate }}</span>
           <span class="text-xl sm:text-2xl font-black text-cyan-700 dark:text-cyan-400">550K</span>
         </div>
       </div>
 
       <!-- 3. GRUPAL -->
-      <div class="bg-white dark:bg-slate-800 p-5 sm:p-6 rounded-2xl border border-slate-200/60 dark:border-slate-700 shadow-sm flex flex-col justify-between">
+      <div class="bg-white/85 dark:bg-slate-950/85 backdrop-blur-md p-5 sm:p-6 rounded-2xl border border-slate-200/60 dark:border-slate-800/80 shadow-lg flex flex-col justify-between">
         <div class="space-y-2">
           <h3 class="font-extrabold text-slate-900 dark:text-white text-base sm:text-lg">{{ 'PRICING.GROUP.TITLE' | translate }}</h3>
           <p class="text-slate-500 dark:text-slate-400 text-xs">{{ 'PRICING.GROUP.DESC' | translate }}</p>
         </div>
-        <div class="border-t border-slate-100 dark:border-slate-700 pt-3 mt-4 flex items-baseline justify-between">
+        <div class="border-t border-slate-200/60 dark:border-slate-800 pt-3 mt-4 flex items-baseline justify-between">
           <span class="text-slate-400 text-xs font-medium">{{ 'PRICING.PER_PERSON' | translate }}</span>
           <span class="text-xl sm:text-2xl font-black text-cyan-700 dark:text-cyan-400">250K</span>
         </div>
       </div>
 
       <!-- 4. ALQUILER -->
-      <div class="bg-white dark:bg-slate-800 p-5 sm:p-6 rounded-2xl border border-slate-200/60 dark:border-slate-700 shadow-sm flex flex-col justify-between">
+      <div class="bg-white/85 dark:bg-slate-950/85 backdrop-blur-md p-5 sm:p-6 rounded-2xl border border-slate-200/60 dark:border-slate-800/80 shadow-lg flex flex-col justify-between">
         <div class="space-y-2">
           <h3 class="font-extrabold text-slate-900 dark:text-white text-base sm:text-lg">{{ 'PRICING.RENTAL.TITLE' | translate }}</h3>
           <p class="text-slate-500 dark:text-slate-400 text-xs">{{ 'PRICING.RENTAL.DESC' | translate }}</p>
         </div>
-        <div class="border-t border-slate-100 dark:border-slate-700 pt-3 mt-4 flex items-baseline justify-between">
+        <div class="border-t border-slate-200/60 dark:border-slate-800 pt-3 mt-4 flex items-baseline justify-between">
           <span class="text-slate-400 text-xs font-medium">{{ 'PRICING.PER_DAY' | translate }}</span>
           <span class="text-xl sm:text-2xl font-black text-cyan-700 dark:text-cyan-400">100K</span>
         </div>
@@ -174,12 +174,12 @@
   </div>
 </section>
 
-<!-- RESTAURANTE Y COMIDA -->
-<section id="food" class="bg-white dark:bg-slate-900 py-10 md:py-16 px-4 sm:px-6 lg:px-8 transition-colors duration-300">
-  <div class="max-w-7xl mx-auto space-y-6 md:space-y-8">
+<!-- WUARUNG -->
+<section id="food" class="py-10 md:py-16 px-4 sm:px-6 lg:px-8 transition-colors duration-300">
+  <div class="max-w-7xl mx-auto space-y-6">
     
-    <div class="text-center space-y-1">
-      <span class="text-cyan-600 dark:text-cyan-400 font-bold tracking-widest text-xs uppercase block">RESTAURANTE & BEACH BAR</span>
+    <div class="text-center space-y-1 bg-white/85 dark:bg-slate-950/85 backdrop-blur-md py-6 px-4 rounded-3xl border border-slate-200/60 dark:border-slate-800/80 shadow-lg max-w-2xl mx-auto">
+      <span class="text-cyan-600 dark:text-cyan-400 font-bold tracking-widest text-xs uppercase block">WUARUNG</span>
       <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">
         {{ 'SERVICES.FOOD_TITLE' | translate }}
       </h2>
@@ -188,32 +188,38 @@
       </p>
     </div>
 
-    <!-- Carrusel táctil en móvil / Grid en Escritorio -->
-    <div class="flex overflow-x-auto gap-4 snap-x snap-mandatory md:grid md:grid-cols-3 md:gap-6 pb-2 md:pb-0 scrollbar-none">
-      <div class="min-w-[80%] sm:min-w-0 snap-center h-48 sm:h-64 rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200/60 dark:border-slate-800 shadow-sm flex-shrink-0 md:flex-shrink">
-        <img src="images/comida.jpg" alt="Local Food 1" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+    <!-- Cuadrícula: 2 columnas en móvil, 3 columnas en ordenador -->
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6">
+      
+      <div class="h-36 sm:h-48 md:h-64 rounded-xl sm:rounded-3xl overflow-hidden border border-slate-200/60 dark:border-slate-800/80 shadow-lg bg-white/85 dark:bg-slate-950/85 backdrop-blur-md p-2">
+        <img src="images/comida.jpg" alt="Local Food 1" class="w-full h-full object-cover rounded-lg sm:rounded-2xl hover:scale-105 transition-transform duration-300">
       </div>
-      <div class="min-w-[80%] sm:min-w-0 snap-center h-48 sm:h-64 rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200/60 dark:border-slate-800 shadow-sm flex-shrink-0 md:flex-shrink">
-        <img src="images/comida2.jpg" alt="Local Food 2" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+      
+      <div class="h-36 sm:h-48 md:h-64 rounded-xl sm:rounded-3xl overflow-hidden border border-slate-200/60 dark:border-slate-800/80 shadow-lg bg-white/85 dark:bg-slate-950/85 backdrop-blur-md p-2">
+        <img src="images/comida2.jpg" alt="Local Food 2" class="w-full h-full object-cover rounded-lg sm:rounded-2xl hover:scale-105 transition-transform duration-300">
       </div>
-      <div class="min-w-[80%] sm:min-w-0 snap-center h-48 sm:h-64 rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200/60 dark:border-slate-800 shadow-sm flex-shrink-0 md:flex-shrink">
-        <img src="images/comida3.jpg" alt="Local Food 3" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+      
+      <div class="col-span-2 md:col-span-1 h-36 sm:h-48 md:h-64 rounded-xl sm:rounded-3xl overflow-hidden border border-slate-200/60 dark:border-slate-800/80 shadow-lg bg-white/85 dark:bg-slate-950/85 backdrop-blur-md p-2">
+        <img src="images/comida3.jpg" alt="Local Food 3" class="w-full h-full object-cover rounded-lg sm:rounded-2xl hover:scale-105 transition-transform duration-300">
       </div>
+
     </div>
 
   </div>
 </section>
 
 <!-- TRANSPORTE & TAXI -->
-<section id="transport" class="bg-slate-50 dark:bg-slate-950 py-10 md:py-16 px-4 sm:px-6 lg:px-8 border-t border-slate-100 dark:border-slate-800 transition-colors duration-300">
+<section id="transport" class="py-10 md:py-16 px-4 sm:px-6 lg:px-8 transition-colors duration-300">
   <div class="max-w-4xl mx-auto">
-    <article class="bg-white dark:bg-slate-900 rounded-2xl sm:rounded-3xl border border-slate-200/60 dark:border-slate-800 shadow-sm overflow-hidden grid grid-cols-1 md:grid-cols-2">
-      <div class="h-48 md:h-full relative">
+    <article class="bg-white/85 dark:bg-slate-950/85 backdrop-blur-md rounded-2xl sm:rounded-3xl border border-slate-200/60 dark:border-slate-800/80 shadow-lg overflow-hidden grid grid-cols-1 md:grid-cols-2 p-2">
+      <div class="h-48 md:h-full relative rounded-xl sm:rounded-2xl overflow-hidden">
         <img src="images/surf-van.jpg" alt="Surf Taxi Lombok" class="w-full h-full object-cover">
       </div>
       <div class="p-5 sm:p-8 flex flex-col justify-between space-y-4 sm:space-y-6">
         <div class="space-y-2">
-          <span class="text-cyan-600 dark:text-cyan-400 font-bold text-[10px] sm:text-xs uppercase tracking-wider block">Servicio Oficial</span>
+          <span class="text-cyan-600 dark:text-cyan-400 font-bold text-[10px] sm:text-xs uppercase tracking-wider block">
+            {{ 'SERVICES.OFFICIAL_SERVICE' | translate }}
+          </span>          
           <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
             <span>🚕</span> {{ 'SERVICES.TRANSPORT_TITLE' | translate }}
           </h3>
@@ -233,9 +239,9 @@
 </section>
 
 <!-- SECCIÓN DIRECCIÓN Y MAPA -->
-<section id="location" class="bg-white dark:bg-slate-900 py-10 md:py-20 px-4 sm:px-6 lg:px-8 border-t border-slate-100 dark:border-slate-800 transition-colors duration-300">
+<section id="location" class="py-10 md:py-20 px-4 sm:px-6 lg:px-8 transition-colors duration-300">
   <div class="max-w-7xl mx-auto space-y-8 md:space-y-12">
-    <div class="text-center space-y-1">
+    <div class="text-center space-y-1 bg-white/85 dark:bg-slate-950/85 backdrop-blur-md py-6 px-4 rounded-3xl border border-slate-200/60 dark:border-slate-800/80 shadow-lg max-w-2xl mx-auto">
       <span class="text-cyan-600 dark:text-cyan-400 font-bold tracking-widest text-xs uppercase block">
         {{ 'LOCATION_SEC.TAG' | translate }}
       </span>
@@ -249,7 +255,7 @@
 
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-start">
       <!-- Tarjeta de Información de Contacto -->
-      <div class="bg-slate-50 dark:bg-slate-800 p-5 sm:p-8 rounded-2xl sm:rounded-3xl border border-slate-200/60 dark:border-slate-700 space-y-4 sm:space-y-6">
+      <div class="bg-white/85 dark:bg-slate-950/85 backdrop-blur-md p-5 sm:p-8 rounded-2xl sm:rounded-3xl border border-slate-200/60 dark:border-slate-800/80 shadow-lg space-y-4 sm:space-y-6">
         <div class="space-y-1">
           <div class="flex items-center gap-2 text-cyan-600 dark:text-cyan-400 font-bold text-sm sm:text-base">
             <span>📍</span>
@@ -260,7 +266,7 @@
           </p>
         </div>
 
-        <div class="space-y-1 border-t border-slate-200/60 dark:border-slate-700 pt-4">
+        <div class="space-y-1 border-t border-slate-200/60 dark:border-slate-800 pt-4">
           <div class="flex items-center gap-2 text-cyan-600 dark:text-cyan-400 font-bold text-sm sm:text-base">
             <span>⏰</span>
             <h3>{{ 'LOCATION_SEC.HOURS_TITLE' | translate }}</h3>
@@ -272,10 +278,10 @@
       </div>
 
       <!-- Mapa Integrado (Google Maps) -->
-      <div class="lg:col-span-2 h-[260px] sm:h-[350px] rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200/60 dark:border-slate-700 shadow-sm">
+      <div class="lg:col-span-2 h-[260px] sm:h-[350px] rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200/60 dark:border-slate-800/80 shadow-lg bg-white/85 dark:bg-slate-950/85 backdrop-blur-md p-2">
         <iframe 
           title="Jofan Surf School Location"
-          class="w-full h-full border-0"
+          class="w-full h-full border-0 rounded-xl sm:rounded-2xl"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3942.846569107936!2d116.16109967590821!3d-8.868770791191062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dc2f4005b63795b%3A0x6b1626fdd01ae6b4!2sSelong%20Belanak%20Beach!5e0!3m2!1sen!2ses!4v1700000000000!5m2!1sen!2ses" 
           allowfullscreen="" 
           loading="lazy" 
