@@ -55,7 +55,7 @@
   },
   "PRICING": {
     "TAG": "PRICING & PLANS",
-    "TITLE": "Clear Pricing No Surprises",
+    "TITLE": "Clear Price No Surprises",
     "POPULAR": "MOST POPULAR",
     "PER_PERSON": "per person",
     "PER_DAY": "per day",
@@ -69,7 +69,7 @@
     },
     "GROUP": {
       "TITLE": "Group Lesson",
-      "DESC": "Max 5 people. 2 hours of fun and safe environment."
+      "DESC": "Max 5 people.2 instructors & 2 hours of fun and safe environment."
     },
     "RENTAL": {
       "TITLE": "Board Rental",
@@ -83,12 +83,13 @@
     "ADDRESS_TITLE": "Address",
     "ADDRESS_TEXT": "Selong Belanak Beach, Lombok, Indonesia",
     "HOURS_TITLE": "Opening Hours",
-    "HOURS_TEXT": "Monday - Sunday: 7:00 AM - 6:00 PM"
+    "HOURS_TEXT": "Monday - Sunday: 8:00 AM - 6:00 PM"
   },
   "SERVICES": {
+    "OFFICIAL_SERVICE": "Official Service",
   "TRANSPORT_TITLE": "Transport & Airport Taxi",
   "TRANSPORT_DESC": "We pick you up anywhere in Lombok. Safe and comfortable transfers.",
-  "FOOD_TITLE": "Beach Bar & Food",
+  "FOOD_TITLE": "Wuarung",
   "FOOD_DESC": "Fresh local meals and cold drinks right after your surf session."
 },
 "WHATSAPP": {
@@ -103,7 +104,7 @@
   "CALL_NOW": "Call / Send WhatsApp"
 },
 "FOOD_SEC": {
-  "TITLE": "Beach Bar & Local Food",
+  "TITLE": "Wuarung",
   "DESC": "Enjoy fresh, healthy local meals, tropical fruits, and cold coconuts right on the beach."
 }
 

@@ -38,6 +38,33 @@
     margin: 0 auto;
     padding: 40px 20px;
   }
+
+
+  /* Estilo base para el fondo con imagen difuminada */
+.bg-surf-pattern {
+  /* Por defecto: modo luz */
+  background-image: 
+    /* Capa 1: Degradado blanco semitransparente para aclarar la imagen y asegurar lectura */
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.75)),
+    /* Capa 2: Tu imagen de fondo */
+    url('/images/fondo-mar.jpg');
+  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Para que la imagen se quede fija al hacer scroll (efecto premium) */
+}
+
+/* Estilo para el modo noche (dark mode) */
+/* Tailwind añade la clase 'dark' al body cuando está activo */
+.dark .bg-surf-pattern {
+  background-image: 
+    /* Capa 1: Degradado negro semitransparente para oscurecer la imagen */
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.85)),
+    url('/images/fondo-mar.jpg');
+  
+  /* Nota: rgba(15, 23, 42, ...) es el color bg-slate-900 que ya usas en modo oscuro */
+}
   
   /* Logotipo y Barra Superior */
   .jovan-navbar {

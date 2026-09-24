@@ -70,7 +70,7 @@
     },
     "GROUP": {
       "TITLE": "Clase Grupal",
-      "DESC": "Máximo 5 personas. 2 horas de aprendizaje seguro y divertido."
+      "DESC": "Máximo 5 personas con 2 instructores y 2 horas de aprendizaje seguro y divertido."
     },
     "RENTAL": {
       "TITLE": "Alquiler de Tabla",
@@ -84,12 +84,13 @@
     "ADDRESS_TITLE": "Dirección",
     "ADDRESS_TEXT": "Playa Selong Belanak, Lombok, Indonesia",
     "HOURS_TITLE": "Horario de atención",
-    "HOURS_TEXT": "Lunes - Domingo: 7:00 AM - 6:00 PM"
+    "HOURS_TEXT": "Lunes - Domingo: 8:00 AM - 6:00 PM"
   },
   "SERVICES": {
+    "OFFICIAL_SERVICE": "Servicio Oficial",
   "TRANSPORT_TITLE": "Transporte y Taxi Aeropuerto",
   "TRANSPORT_DESC": "Te recogemos en cualquier punto de Lombok. Traslados cómodos y seguros.",
-  "FOOD_TITLE": "Bar de Playa y Comida",
+  "FOOD_TITLE": "Wuarung",
   "FOOD_DESC": "Platos locales frescos y bebidas frías justo después de tu sesión de surf."
 },
 "WHATSAPP": {
@@ -104,7 +105,7 @@
   "CALL_NOW": "Llamar / Enviar WhatsApp"
 },
 "FOOD_SEC": {
-  "TITLE": "Restaurante de Playa y Comida",
+  "TITLE": "Wuarung",
   "DESC": "Disfruta de platos locales frescos, frutas tropicales y cocos fríos justo al salir de tu sesión de surf."
 }
 
