@@ -363,3 +363,11 @@
     border: 1px dashed var(--jofan-border);
   }
   
+  /* src/styles.css */
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  scroll-margin-top: 100px; /* Si tu barra mide unos 60-70px, con 100px dejamos aire de sobra */
+}
