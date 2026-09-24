@@ -39,6 +39,11 @@
     padding: 40px 20px;
   }
 
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px; /* Evita que la barra de navegación fija tape el título de la sección al llegar */
+  }
+
 
   /* Estilo base para el fondo con imagen difuminada */
 .bg-surf-pattern {
